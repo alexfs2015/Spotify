@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="other">%1$d 小時</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="other">%1$d 分鐘</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="other">%1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="other">正在關注 • %1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="other">每日播放了 %1$,d 次</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="other">%1$,d 首新歌曲</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="other">已在 %1$d 天前更新</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="other">%1$d 小時</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="other">%1$d 分鐘</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="other">你確定要關注全部共 %1$,d 位朋友？</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="other">%1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="other">%1$,d，共 %2$,d (完成 %3$,d%%)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="other">%1$,d 人喜歡</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="other">我們已傳送包含 %1$d 位數代碼的簡訊到 %2$s。</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="other">%1$,d 資料夾</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="other">%1$s 人喜歡</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="other">%1$,d 個播放清單</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="other">儲存 %1$,d 首歌</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="other">已選 %1$,d 首歌</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="other">%1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="other">%1$,d 張單集</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="other">%1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="other">%1$,d 位粉絲</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="other">%1$,d 名粉絲</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="other">%1$s 人喜歡</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="other">已選 %1$d 種</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="other">你加入了一個包含 %2$s 和其他 %1$s 個人的群組。你們現在可以共享音樂控制權了。</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="other">%1$s 正在聆聽</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="other">%1$d 時</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="other">%1$d 分</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="other">%1$d 秒</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="other">已新增 %1$,d 首歌曲</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="other">%1$s 首歌曲</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="other">%1$s 個資料夾</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="other">%1$s 個播放清單</item>
+    </plurals>
+</resources>

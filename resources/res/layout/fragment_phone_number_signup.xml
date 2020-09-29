@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/content" android:background="@drawable/login_background_gradient" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:gravity="center" android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/login_page_header_margin_top" android:layout_marginBottom="@dimen/login_page_header_margin_bottom" style="@style/TextAppearance.Tokens.Canon"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <FrameLayout android:id="@+id/container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/login_page_margin_top">
+                <include android:visibility="gone" layout="@layout/request_otp"/>
+                <include android:visibility="gone" layout="@layout/validate_otp"/>
+                <com.spotify.music.features.signup.agegender.view.AgeGenderView android:gravity="center_horizontal" android:id="@+id/age_gender" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.spotify.music.features.signup.displayname.DisplayNameView android:gravity="center_horizontal" android:id="@+id/display_name" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/spinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

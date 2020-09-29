@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape>
+            <gradient android:startColor="#6b296b" android:endColor="#9d4cad" android:angle="315"/>
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:drawable="@drawable/bg_offer_scrim"/>
+</layer-list>

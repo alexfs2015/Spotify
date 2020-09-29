@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.music.newplaying.scroll.widgets.pivots.views.PivotsWidgetView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/ScrollWidget">
+    <TextView android:id="@+id/pivots_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pivots_scroll_widget_header" android:layout_alignParentTop="true" style="@style/ScrollWidgetHeader"/>
+    <com.spotify.music.newplaying.scroll.widgets.pivots.views.PivotsWidgetLoadingView android:id="@+id/loading_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:layout_below="@+id/pivots_header"/>
+    <com.spotify.music.newplaying.scroll.widgets.pivots.views.PivotsWidgetContentView android:id="@+id/pivots_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:layout_below="@+id/pivots_header"/>
+</com.spotify.music.newplaying.scroll.widgets.pivots.views.PivotsWidgetView>

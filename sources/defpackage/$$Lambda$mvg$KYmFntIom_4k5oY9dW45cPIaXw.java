@@ -1,0 +1,18 @@
+package defpackage;
+
+import android.widget.TextView;
+import com.spotify.music.R;
+
+/* renamed from: -$$Lambda$mvg$KYmFntIom_4k5oY9dW-45cPIaXw reason: invalid class name and default package */
+/* compiled from: lambda */
+public final /* synthetic */ class $$Lambda$mvg$KYmFntIom_4k5oY9dW45cPIaXw implements gcs {
+    private final /* synthetic */ TextView f$0;
+
+    public /* synthetic */ $$Lambda$mvg$KYmFntIom_4k5oY9dW45cPIaXw(TextView textView) {
+        this.f$0 = textView;
+    }
+
+    public final void accept(Object obj) {
+        jwu.a(this.f$0, 0, (int) R.id.drawable_download_progress);
+    }
+}

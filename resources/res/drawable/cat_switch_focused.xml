@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape>
+            <corners android:radius="24dp"/>
+            <size android:height="24dp" android:width="40dp"/>
+            <solid android:color="@color/cat_dark_green_40"/>
+            <stroke android:width="2dp" android:color="@color/cat_light_green"/>
+        </shape>
+    </item>
+    <item>
+        <clip android:clipOrientation="horizontal">
+            <shape>
+                <corners android:radius="24dp"/>
+                <solid android:color="@color/cat_medium_green"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="center" android:id="@+id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:iconType="919"/>
+    <TextView android:textAppearance="@style/TextAppearance.Cat.Metadata" android:textSize="12sp" android:gravity="center" android:layout_gravity="center" android:id="@+id/simple_text_upsell" android:paddingLeft="@dimen/std_16dp" android:paddingRight="@dimen/std_16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44dp" android:paddingStart="@dimen/std_16dp" android:paddingEnd="@dimen/std_16dp"/>
+</androidx.percentlayout.widget.PercentFrameLayout>

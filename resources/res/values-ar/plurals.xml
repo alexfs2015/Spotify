@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="zero">%1$d  ساعة</item>
+        <item quantity="one"> ساعة واحدة</item>
+        <item quantity="two"> ساعتان</item>
+        <item quantity="few">%1$d  ساعات</item>
+        <item quantity="many">%1$d  ساعةً</item>
+        <item quantity="other">%1$d  ساعةٍ</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="zero">%1$d  دقيقة</item>
+        <item quantity="one">  دقيقة واحدة</item>
+        <item quantity="two">  دقيقتان</item>
+        <item quantity="few">%1$d  دقائق</item>
+        <item quantity="many">%1$d  دقيقةً</item>
+        <item quantity="other">%1$d  دقيقةٍ</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="zero">لا توجد أغانٍ</item>
+        <item quantity="one">أغنية واحدة</item>
+        <item quantity="two">أغنيتان</item>
+        <item quantity="few">%1$,d أغانٍ</item>
+        <item quantity="many">%1$,d أغنية</item>
+        <item quantity="other">%1$,d أغنية</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="zero">مُتابع • لا توجد أغانٍ</item>
+        <item quantity="one">مُتابع • أغنية واحدة</item>
+        <item quantity="two">مُتابع • أغنيتين</item>
+        <item quantity="few">مُتابع • %1$,d أغانٍ</item>
+        <item quantity="many">مُتابع • %1$,d أغنية</item>
+        <item quantity="other">مُتابع • %1$,d أغنية</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="zero">%1$,d لا توجد مرّات استماع في اليوم</item>
+        <item quantity="one">%1$,d مرّة استماع في اليوم</item>
+        <item quantity="two">%1$,d مرّتان استماع في اليوم</item>
+        <item quantity="few">%1$,d مرّات استماع في اليوم</item>
+        <item quantity="many">%1$,d مرّة استماع في اليوم</item>
+        <item quantity="other">%1$,d مرّة استماع في اليوم</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="zero">لا توجد إضافات جديدة</item>
+        <item quantity="one">إضافة جديدة واحدة</item>
+        <item quantity="two">%1$,d إضافتان جديدتان</item>
+        <item quantity="few">%1$,d مشاركات جديدة</item>
+        <item quantity="many">%1$,d إضافة جديدة</item>
+        <item quantity="other">%1$,d إضافة جديدة</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="zero">تمّ التحديث منذ %1$d يوم</item>
+        <item quantity="one">تمّ التحديث منذ يوماً واحداً</item>
+        <item quantity="two">تمّ التحديث منذ يومين</item>
+        <item quantity="few">تمّ التحديث منذ %1$d أيام</item>
+        <item quantity="many">تمّ التحديث منذ %1$d يوماً</item>
+        <item quantity="other">تمّ التحديث منذ %1$d يوم</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="zero">%1$d ساعة</item>
+        <item quantity="one">ساعة واحدة</item>
+        <item quantity="two">ساعتان</item>
+        <item quantity="few">%1$d ساعات</item>
+        <item quantity="many">%1$d ساعةً</item>
+        <item quantity="other">%1$d ساعة</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="zero">%1$d دقيقة</item>
+        <item quantity="one">دقيقة واحدة</item>
+        <item quantity="two">دقيقتان</item>
+        <item quantity="few">%1$d دقائق</item>
+        <item quantity="many">%1$d دقيقة</item>
+        <item quantity="other">%1$d دقيقة</item>
+    </plurals>
+    <plurals name="error_dialog_body_resend_limit">
+        <item quantity="zero">انتظر %1$d ثانية، ثم أطلب رمزاً جديداً</item>
+        <item quantity="one">انتظر ثانية واحدة، ثم أطلب رمزاً جديداً</item>
+        <item quantity="two">انتظر ثانيتان، ثم أطلب رمزاً جديداً</item>
+        <item quantity="few">انتظر %1$d ثوانٍ، ثم أطلب رمزاً جديداً</item>
+        <item quantity="many">انتظر %1$d ثانية، ثم أطلب رمزاً جديداً</item>
+        <item quantity="other">انتظر %1$d ثانية، ثم أطلب رمزاً جديداً</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="zero">هل أنت متأكد أنك تريد متابعة الشخص الـ %1$,d هذا؟</item>
+        <item quantity="one">هل أنت متأكد أنك تريد متابعة هذا الشخص؟</item>
+        <item quantity="two">هل أنت متأكد من متابعة هذين الشخصين؟</item>
+        <item quantity="few">هل أنت متأكد أنك تريد متابعة جميع الأشخاص الـ %1$,d هؤلاء؟</item>
+        <item quantity="many">هل أنت متأكد أنك تريد متابعة جميع الأشخاص الـ %1$,d هؤلاء؟</item>
+        <item quantity="other">هل أنت متأكد أنك تريد متابعة جميع الأشخاص الـ %1$,d هؤلاء؟</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="zero">لا توجد أغانٍ</item>
+        <item quantity="one">أغنية واحدة</item>
+        <item quantity="two">أغنيتان</item>
+        <item quantity="few">%1$,d أغانٍ</item>
+        <item quantity="many">%1$,d أغنية</item>
+        <item quantity="other">%1$,d أغنية</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="zero">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+        <item quantity="one">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+        <item quantity="two">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+        <item quantity="few">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+        <item quantity="many">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+        <item quantity="other">%1$,d من %2$,d (%3$,d%% مكتمل)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="zero">%1$,d إعجاب</item>
+        <item quantity="one">%1$,d إعجاب</item>
+        <item quantity="two">%1$,d إعجابين</item>
+        <item quantity="few">%1$,d إعجابات</item>
+        <item quantity="many">%1$,d إعجاباً</item>
+        <item quantity="other">%1$,d إعجاب</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="zero">أرسلنا رسالة نصيّة قصيرة بها كود مكون من %1$d رقم على %2$s</item>
+        <item quantity="one">أرسلنا رسالة نصيّة قصيرة بها كود مكون من رقم واحد على %2$s</item>
+        <item quantity="two">أرسلنا رسالة نصيّة قصيرة بها كود مكون من رقمين على %2$s</item>
+        <item quantity="few">أرسلنا رسالة نصيّة قصيرة بها كود مكون من %1$d أرقام على %2$s</item>
+        <item quantity="many">أرسلنا رسالة نصيّة قصيرة بها كود مكون من %1$d رقماً على %2$s</item>
+        <item quantity="other">أرسلنا رسالة نصيّة قصيرة بها كود مكون من %1$d رقم على %2$s</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="zero">لا توجد ملفات</item>
+        <item quantity="one">ملفاً واحداً</item>
+        <item quantity="two">ملفَين</item>
+        <item quantity="few">%1$,d ملفات</item>
+        <item quantity="many">%1$,d ملفاً</item>
+        <item quantity="other">%1$,d ملفٍ</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="zero">%1$s إعجاب</item>
+        <item quantity="one">%1$s إعجاب</item>
+        <item quantity="two">%1$s إعجابان</item>
+        <item quantity="few">%1$s إعجابات</item>
+        <item quantity="many">%1$s إعجاباً</item>
+        <item quantity="other">%1$s إعجاب</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="zero">لا توجد قوائم أغاني</item>
+        <item quantity="one">قائمة أغاني واحدة</item>
+        <item quantity="two">قائمتا أغاني</item>
+        <item quantity="few">%1$,d قوائم أغاني</item>
+        <item quantity="many">%1$,d قائمة أغاني</item>
+        <item quantity="other">%1$,d قائمة أغاني</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="zero">لم تحفظ أي أغنية</item>
+        <item quantity="one">حفظ أغنية واحدة</item>
+        <item quantity="two">حفظ أغنيتان</item>
+        <item quantity="few">حفظ %1$,d أغانٍ</item>
+        <item quantity="many">حفظ %1$,d أغنية</item>
+        <item quantity="other">حفظ %1$,d أغنية</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="zero">لم يتم تحديد أغانٍ</item>
+        <item quantity="one">تم تحديد أغنية واحدة</item>
+        <item quantity="two">تم تحديد أغنيتان</item>
+        <item quantity="few">تم تحديد %1$,d أغانٍ</item>
+        <item quantity="many">تم تحديد %1$,d أغنية</item>
+        <item quantity="other">تم تحديد %1$,d أغنية</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="zero">لا توجد أغانٍ</item>
+        <item quantity="one">%1$,d أغنية واحدة</item>
+        <item quantity="two">أغنيتان</item>
+        <item quantity="few">%1$,d أغانٍ</item>
+        <item quantity="many">%1$,d أغنية</item>
+        <item quantity="other">%1$,d أغنية</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="zero">لا توجد حلقات</item>
+        <item quantity="one">حلقة واحدة</item>
+        <item quantity="two">حلقتان</item>
+        <item quantity="few">%1$,d حلقات</item>
+        <item quantity="many">%1$,d حلقة</item>
+        <item quantity="other">%1$,d حلقة</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="zero">لا توجد أغانٍ</item>
+        <item quantity="one">أغنية واحدة</item>
+        <item quantity="two">أغنيتان</item>
+        <item quantity="few">%1$,d أغاني</item>
+        <item quantity="many">%1$,d أغنية</item>
+        <item quantity="other">%1$,d أغنية</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابع</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="zero">لا يوجد متابعين</item>
+        <item quantity="one">متابعاً واحداً</item>
+        <item quantity="two">متابعان</item>
+        <item quantity="few">%1$,d متابعين</item>
+        <item quantity="many">%1$,d متابعاً</item>
+        <item quantity="other">%1$,d متابعٍ</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="zero">%1$s إعجاب</item>
+        <item quantity="one">%1$s إعجاب</item>
+        <item quantity="two">%1$s إعجابين</item>
+        <item quantity="few">%1$s إعجابات</item>
+        <item quantity="many">%1$s إعجاباً</item>
+        <item quantity="other">%1$s إعجاب</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="zero">%1$d لغة تمّ اختيارها</item>
+        <item quantity="one">%1$d لغة تمّ اختيارها</item>
+        <item quantity="two">%1$d لغتان تمّ اختيارهما</item>
+        <item quantity="few">%1$d لغات تمّ اختيارها</item>
+        <item quantity="many">%1$d لغة تمّ اختيارها</item>
+        <item quantity="other">%1$d لغة تمّ اختيارها</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="zero">لقد انضممت إلى جلسة جماعية مع %2$s و%1$s آخرين. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+        <item quantity="one">لقد انضممت إلى جلسة جماعية مع %2$s وشخص آخر. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+        <item quantity="two">لقد انضممت إلى جلسة جماعية مع %2$s واثنان آخران. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+        <item quantity="few">لقد انضممت إلى جلسة جماعية مع %2$s واثنان آخران. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+        <item quantity="many">لقد انضممت إلى جلسة جماعية مع %2$s و%1$s آخرون. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+        <item quantity="other">لقد انضممت إلى جلسة جماعية مع %2$s و%1$s آخرون. الآن يمكنك مشاركة التحكم في الموسيقى.</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="zero">لا يوجد مستمعين</item>
+        <item quantity="one">مستمعاً واحداً</item>
+        <item quantity="two">مستمعان</item>
+        <item quantity="few">%1$s مستمعين</item>
+        <item quantity="many">%1$s مستمعاً</item>
+        <item quantity="other">%1$s مستمع</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="zero">%1$d ساعة</item>
+        <item quantity="one">ساعة واحدة</item>
+        <item quantity="two">ساعتان</item>
+        <item quantity="few">%1$d ساعات</item>
+        <item quantity="many">%1$d ساعةً</item>
+        <item quantity="other">%1$d ساعة</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="zero">%1$d دقيقة</item>
+        <item quantity="one">دقيقة واحدة</item>
+        <item quantity="two">دقيقتان</item>
+        <item quantity="few">%1$d دقائق</item>
+        <item quantity="many">%1$d دقيقة</item>
+        <item quantity="other">%1$d دقيقة</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="zero">لا توجد ثوانٍ</item>
+        <item quantity="one">ثانية واحدة</item>
+        <item quantity="two">ثانيتان</item>
+        <item quantity="few">%1$d ثوانٍ</item>
+        <item quantity="many">%1$d ثانية</item>
+        <item quantity="other">%1$d ثانية</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="zero">لم تتم إضافة أغانٍ</item>
+        <item quantity="one">تمّت إضافة أغنية واحدة</item>
+        <item quantity="two">تمّت إضافة أغنيتَين</item>
+        <item quantity="few">تمّت إضافة %1$,d أغانٍ</item>
+        <item quantity="many">تمّت إضافة %1$,d أغنية</item>
+        <item quantity="other">تمّت إضافة %1$,d أغنية</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="zero">لا توجد أغانٍ</item>
+        <item quantity="one">أغنية واحدة</item>
+        <item quantity="two">أغنيتان</item>
+        <item quantity="few">%1$s أغانٍ</item>
+        <item quantity="many">%1$s أغنية</item>
+        <item quantity="other">%1$s أغنية</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="zero">%1$s ملفٍ</item>
+        <item quantity="one">ملفاً واحداً</item>
+        <item quantity="two">%1$s ملفٍ</item>
+        <item quantity="few">%1$s ملفٍ</item>
+        <item quantity="many">%1$s ملفٍ</item>
+        <item quantity="other">%1$s ملفٍ</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="zero">لا توجد قوائم أغاني</item>
+        <item quantity="one">قائمة أغاني واحدة</item>
+        <item quantity="two">قائمتا أغاني</item>
+        <item quantity="few">%1$s قوائم أغاني</item>
+        <item quantity="many">%1$s قائمة أغاني</item>
+        <item quantity="other">%1$s قائمة أغاني</item>
+    </plurals>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/background" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@color/black_30" android:scaleType="centerCrop"/>
+    <RelativeLayout android:orientation="vertical" android:padding="32dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <me.grantland.widget.AutofitTextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="40dp" android:text="@string/new_release_dialog_description" android:maxLines="2" android:maxLength="73" android:layout_alignParentTop="true" style="?attr/pasteTextAppearanceBodyMediumBold"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/newrelease_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_alignParentBottom="true">
+            <me.grantland.widget.AutofitTextView android:ellipsize="end" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/album_title" android:layout_width="match_parent" android:layout_height="0dp" android:maxLines="2" android:maxLength="73" android:layout_weight="1" style="?attr/pasteTextAppearanceBodyMediumBold"/>
+            <me.grantland.widget.AutofitTextView android:textColor="@color/white" android:ellipsize="end" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/artist_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="2" android:maxLength="255" style="?attr/pasteTextAppearanceBodySmall"/>
+            <me.grantland.widget.AutofitTextView android:textSize="14sp" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@+id/go_to_album_button" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="16dp" android:text="@string/new_release_dialog_action" android:singleLine="true" android:maxLength="28" android:filterTouchesWhenObscured="false" android:textAllCaps="true" style="?attr/glueButtonPrimaryWhite"/>
+        </LinearLayout>
+        <com.spotify.mobile.android.ui.view.AspectRatioFrameLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/newrelease_bottom" android:layout_below="@+id/header">
+            <ImageView android:layout_gravity="center" android:id="@+id/album_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+        </com.spotify.mobile.android.ui.view.AspectRatioFrameLayout>
+    </RelativeLayout>
+</FrameLayout>

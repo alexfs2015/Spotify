@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allowed_callers xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Google Maps" package="com.google.android.apps.maps">
+        <defpackage.key release="true"> f0:fd:6c:5b:41:0f:25:cb:25:c3:b5:33:46:c8:97:2f:ae:30:f8:ee:74:11:df:91:04:80:ad:6b:2d:60:db:83 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Page" package="com.samsung.android.app.spage">
+        <defpackage.key release="false"> C8:A2:E9:BC:CF:59:7C:2F:B6:DC:66:BE:E2:93:FC:13:F2:FC:47:EC:77:BC:6B:2B:0D:52:C1:1F:51:19:2A:B8 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Page" package="com.samsung.android.app.spage">
+        <defpackage.key release="true"> 34:DF:0E:7A:9F:1C:F1:89:2E:45:C0:56:B4:97:3C:D8:1C:CF:14:8A:40:50:D1:1A:EA:4A:C5:A6:5F:90:0A:42 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Spotify MB Controller Sample" package="com.spotify.mbscontroller">
+        <defpackage.key release="false"> D5:FD:11:26:74:0E:63:C1:2B:CE:01:CB:25:9A:21:7C:0F:7F:EC:50:25:D4:D5:AD:4C:5D:DB:D9:99:01:29:A9 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Routines" package="com.samsung.android.app.routines">
+        <defpackage.key release="false"> C8:A2:E9:BC:CF:59:7C:2F:B6:DC:66:BE:E2:93:FC:13:F2:FC:47:EC:77:BC:6B:2B:0D:52:C1:1F:51:19:2A:B8 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Routines" package="com.samsung.android.app.routines">
+        <defpackage.key release="true"> 34:DF:0E:7A:9F:1C:F1:89:2E:45:C0:56:B4:97:3C:D8:1C:CF:14:8A:40:50:D1:1A:EA:4A:C5:A6:5F:90:0A:42 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung S Finder" package="com.samsung.android.app.galaxyfinder">
+        <defpackage.key release="false"> C8:A2:E9:BC:CF:59:7C:2F:B6:DC:66:BE:E2:93:FC:13:F2:FC:47:EC:77:BC:6B:2B:0D:52:C1:1F:51:19:2A:B8 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung S Finder" package="com.samsung.android.app.galaxyfinder">
+        <defpackage.key release="true"> 34:DF:0E:7A:9F:1C:F1:89:2E:45:C0:56:B4:97:3C:D8:1C:CF:14:8A:40:50:D1:1A:EA:4A:C5:A6:5F:90:0A:42 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Clock High End" package="com.sec.android.app.clockpackage">
+        <defpackage.key release="true"> 34:DF:0E:7A:9F:1C:F1:89:2E:45:C0:56:B4:97:3C:D8:1C:CF:14:8A:40:50:D1:1A:EA:4A:C5:A6:5F:90:0A:42 
+        </defpackage.key>
+    </signature>
+    <signature allowedResources="com.spotify.mobile.android.service.media.provider.MediaProvider,com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" name="Samsung Clock Low End" package="com.sec.android.app.clockpackage">
+        <defpackage.key release="true"> 0A:01:21:31:B1:BD:F9:E8:0E:F9:7D:37:F3:B4:83:62:BE:36:3A:46:4C:84:45:EC:F8:36:27:EB:E8:49:3A:1E 
+        </defpackage.key>
+    </signature>
+</allowed_callers>

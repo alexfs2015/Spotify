@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/tinkerbell_tooltip_icon" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginLeft="16dp"/>
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceBodySmall" android:textSize="20sp" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/tinkerbell_tooltip_title" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceBodySmall" android:textSize="14sp" android:gravity="start" android:layout_gravity="center_horizontal" android:id="@+id/tinkerbell_tooltip_body" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+package com.spotify.http.wg;
+
+public interface WebgateTokenProvider {
+
+    public static class WebgateTokenException extends Exception {
+        private static final long serialVersionUID = 593539459345L;
+    }
+
+    String a(int i);
+
+    void a();
+
+    String b(int i);
+}

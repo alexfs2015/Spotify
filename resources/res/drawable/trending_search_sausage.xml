@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/white"/>
+            <size android:height="32sp"/>
+            <corners android:radius="16sp"/>
+            <padding android:left="@dimen/cat_button_small_padding" android:top="0px" android:right="@dimen/cat_button_small_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/white"/>
+            <size android:height="32sp"/>
+            <corners android:radius="16sp"/>
+            <padding android:left="@dimen/cat_button_small_padding" android:top="0px" android:right="@dimen/cat_button_small_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/white"/>
+            <size android:height="32sp"/>
+            <corners android:radius="16sp"/>
+            <padding android:left="@dimen/cat_button_small_padding" android:top="0px" android:right="@dimen/cat_button_small_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/white"/>
+            <size android:height="32sp"/>
+            <corners android:radius="16sp"/>
+            <padding android:left="@dimen/cat_button_small_padding" android:top="0px" android:right="@dimen/cat_button_small_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+</selector>

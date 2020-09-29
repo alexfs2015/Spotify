@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.spotify.music.freetier.experiments.artistsyoumightlike.view.RoundedCornerImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <View android:id="@+id/dark_gradient" android:background="@drawable/free_tier_artists_you_might_like_dark_gradient" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ImageButton android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/heart_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:contentDescription="@string/free_tier_artists_you_might_like_heart_button_description"/>
+    <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:id="@+id/text_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceHeaderSmall" android:gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceMetadata" android:textColor="@color/white" android:gravity="center" android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="16dp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+</merge>

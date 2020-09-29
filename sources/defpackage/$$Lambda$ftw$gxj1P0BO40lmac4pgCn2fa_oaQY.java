@@ -1,0 +1,18 @@
+package defpackage;
+
+import android.view.View;
+import android.view.View.OnClickListener;
+
+/* renamed from: -$$Lambda$ftw$gxj1P0BO40lmac4pgCn2fa_oaQY reason: invalid class name and default package */
+/* compiled from: lambda */
+public final /* synthetic */ class $$Lambda$ftw$gxj1P0BO40lmac4pgCn2fa_oaQY implements OnClickListener {
+    private final /* synthetic */ ftw f$0;
+
+    public /* synthetic */ $$Lambda$ftw$gxj1P0BO40lmac4pgCn2fa_oaQY(ftw ftw) {
+        this.f$0 = ftw;
+    }
+
+    public final void onClick(View view) {
+        this.f$0.a(view);
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_enabled="false">
+        <shape>
+            <stroke android:width="2dp" android:color="@color/sthlm_blk_white_60"/>
+            <solid android:color="@color/pasteTransparent"/>
+            <size android:height="48dp"/>
+            <corners android:radius="48dp"/>
+            <padding android:left="@dimen/glue_button_bordered_padding" android:top="0px" android:right="@dimen/glue_button_bordered_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape>
+            <stroke android:width="2dp" android:color="@color/sthlm_blk_white"/>
+            <solid android:color="@color/pasteTransparent"/>
+            <size android:height="48dp"/>
+            <corners android:radius="48dp"/>
+            <padding android:left="@dimen/glue_button_bordered_padding" android:top="0px" android:right="@dimen/glue_button_bordered_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <stroke android:width="2dp" android:color="@color/sthlm_blk_white"/>
+            <solid android:color="@color/sthlm_blk_white_60"/>
+            <size android:height="48dp"/>
+            <corners android:radius="48dp"/>
+            <padding android:left="@dimen/glue_button_bordered_padding" android:top="0px" android:right="@dimen/glue_button_bordered_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <stroke android:width="2dp" android:color="@color/sthlm_blk_white"/>
+            <solid android:color="@color/pasteTransparent"/>
+            <size android:height="48dp"/>
+            <corners android:radius="48dp"/>
+            <padding android:left="@dimen/glue_button_bordered_padding" android:top="0px" android:right="@dimen/glue_button_bordered_padding" android:bottom="0px"/>
+        </shape>
+    </item>
+</selector>

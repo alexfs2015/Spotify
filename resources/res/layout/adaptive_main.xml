@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.spotify.mobile.android.ui.view.MainLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/fragment_container" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/navigation_bar" app:layout_constraintTop_toTopOf="0"/>
+        <FrameLayout android:id="@+id/navigation_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bottom_navigation_bar_top_margin" app:layout_constraintBottom_toBottomOf="0"/>
+        <com.spotify.mobile.android.ui.view.snackbar.SnackBar android:id="@+id/snack_bar_top" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0"/>
+        <com.spotify.mobile.android.ui.view.snackbar.SnackBar android:id="@+id/snack_bar_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/navigation_bar"/>
+        <FrameLayout android:id="@+id/toolbar_wrapper" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0"/>
+        <com.spotify.mobile.android.spotlets.tooltip.TooltipContainer android:id="@+id/tooltip_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <com.spotify.music.libs.connect.access.view.ConnectAccessButton android:id="@+id/connect_access_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.spotify.mobile.android.ui.view.MainLayout>
+    <FrameLayout android:id="@+id/screensaver_ad_container" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <include layout="@layout/quicksilver_views_main_activity"/>
+</merge>

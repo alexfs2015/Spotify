@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/toolbar_wrapper" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.spotify.paste.widgets.FlexibleSquareImageView android:layout_gravity="center" android:id="@+id/edit_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_8dp" android:layout_marginBottom="@dimen/std_8dp" android:minWidth="@dimen/profile_image_min_size" android:contentDescription="@string/profile_picture_description" app:widthFraction="65%"/>
+        <EditText android:textAppearance="?attr/pasteTextAppearanceHeaderLarge" android:gravity="center_horizontal" android:id="@+id/edit_displayname" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/edit_profile_name_hint" android:maxLines="1" android:selectAllOnFocus="true" android:inputType="textCapSentences" android:imeOptions="actionDone"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

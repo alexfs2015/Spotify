@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.music.newplaying.scroll.widgets.lyrics.LyricsCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/ScrollWidget">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:text="@string/lyrics_card_title" style="@style/ScrollWidgetHeader"/>
+    <com.spotify.music.newplaying.scroll.widgets.lyrics.InterceptFrameLayout android:id="@+id/lyrics_card_container" android:layout_width="match_parent" android:layout_height="@dimen/lyrics_widget_height" android:layout_marginTop="@dimen/std_24dp" android:layout_marginBottom="@dimen/std_24dp">
+        <com.spotify.music.lyrics.views.LyricsView android:id="@+id/lyrics_view" android:visibility="gone" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.spotify.music.newplaying.scroll.widgets.lyrics.LyricsWidgetLoadingView android:orientation="vertical" android:id="@+id/loading_view" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.spotify.music.newplaying.scroll.widgets.lyrics.InterceptFrameLayout>
+</com.spotify.music.newplaying.scroll.widgets.lyrics.LyricsCardView>

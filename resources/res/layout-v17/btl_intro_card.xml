@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/intro_card" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0">
+    <TextView android:textSize="@dimen/btl_intro_title_text_size" android:gravity="center" android:id="@+id/intro_title" android:layout_width="match_parent" android:layout_height="0dp" android:maxLines="2" android:layout_weight="1" android:textAlignment="gravity" style="?attr/pasteTextAppearanceHeaderSmall"/>
+    <include layout="@layout/powered_by_genius"/>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="genre_list_columns">4</integer>
+    <integer name="grid_columns">@integer/grid_columns_land</integer>
+    <integer name="hugs_grid_columns">@integer/hugs_grid_columns_land</integer>
+</resources>

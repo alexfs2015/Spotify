@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defpackage.set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:ordering="together">
+    <objectAnimator android:interpolator="@android:anim/decelerate_interpolator" android:duration="600" android:valueFrom="20dp" android:valueTo="0dp" android:valueType="floatType" android:propertyName="translationY"/>
+    <objectAnimator android:interpolator="@android:anim/decelerate_interpolator" android:duration="600" android:valueFrom="0" android:valueTo="1" android:valueType="floatType" android:propertyName="alpha"/>
+</defpackage.set>

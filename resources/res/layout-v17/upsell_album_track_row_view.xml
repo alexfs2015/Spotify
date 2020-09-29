@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <TextView android:textAppearance="?attr/pasteTextAppearanceBodyMedium" android:textColor="?attr/glueRowTitleColor" android:ellipsize="end" android:id="@android:id/text1" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@android:id/icon" android:layout_centerVertical="true" android:layout_toStartOf="@android:id/icon"/>
+    <ImageView android:id="@android:id/icon" android:duplicateParentState="true" android:layout_width="22dp" android:layout_height="22dp" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_alignParentEnd="true"/>
+</merge>

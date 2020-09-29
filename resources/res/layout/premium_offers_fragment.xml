@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.android.glue.patterns.header.GlueHeaderLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/glue_header_layout" android:background="#4e05c3" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_gravity="center_horizontal">
+    <com.spotify.android.glue.patterns.header.headers.GlueHeaderView android:gravity="center" android:id="@+id/header_view" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.GlueHeaderView.ExtraReduced"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="com.spotify.android.glue.patterns.header.behavior.GlueScrollingViewBehavior"/>
+</com.spotify.android.glue.patterns.header.GlueHeaderLayout>

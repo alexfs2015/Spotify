@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="one">%1$d tim</item>
+        <item quantity="other">%1$d tim</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="one">%1$,d FÖLJARE</item>
+        <item quantity="other">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="one">%1$,d FÖLJARE</item>
+        <item quantity="other">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="one">%1$,d låt</item>
+        <item quantity="other">%1$,d låtar</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="one">Följer • %1$,d låt</item>
+        <item quantity="other">Följer • %1$,d låtar</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="one">%1$,d uppspelning i dag</item>
+        <item quantity="other">%1$,d uppspelningar i dag</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="one">%1$,d ny post</item>
+        <item quantity="other">%1$,d nya poster</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="one">Uppdaterades för %1$d dag sedan</item>
+        <item quantity="other">Uppdaterades för %1$d dagar sedan</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="one">%1$d timme</item>
+        <item quantity="other">%1$d timmar</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="one">%1$d minut</item>
+        <item quantity="other">%1$d minuter</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="one">Vill du följa %1$,d person?</item>
+        <item quantity="other">Vill du följa alla %1$,d personer?</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="one">%1$,d FÖLJARE</item>
+        <item quantity="other">%1$,d FÖLJARE</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="one">%1$,d låt</item>
+        <item quantity="other">%1$,d låtar</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="one">%1$,d av %2$,d (%3$,d %% klart)</item>
+        <item quantity="other">%1$,d av %2$,d (%3$,d %% klart)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="one">%1$,d gillar</item>
+        <item quantity="other">%1$,d gillar</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="one">Vi skickade ett sms med en %1$d-siffrig kod till %2$s.</item>
+        <item quantity="other">Vi skickade ett sms med en %1$d-siffrig kod till %2$s.</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="one">%1$,d mapp</item>
+        <item quantity="other">%1$,d mappar</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="one">%1$s GILLAR</item>
+        <item quantity="other">%1$s GILLAR</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="one">%1$,d spellista</item>
+        <item quantity="other">%1$,d spellistor</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="one">Spara %1$,d låt</item>
+        <item quantity="other">Spara %1$,d låtar</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="one">%1$,d låt vald</item>
+        <item quantity="other">%1$,d låtar valda</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="one">%1$,d låt</item>
+        <item quantity="other">%1$,d låtar</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="one">%1$,d AVSNITT</item>
+        <item quantity="other">%1$,d AVSNITT</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="one">%1$,d LÅT</item>
+        <item quantity="other">%1$,d LÅTAR</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="one">%1$,d följare</item>
+        <item quantity="other">%1$,d följare</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="one">%1$,d följare</item>
+        <item quantity="other">%1$,d följare</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="one">%1$,d följare</item>
+        <item quantity="other">%1$,d följare</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="one">%1$,d följare</item>
+        <item quantity="other">%1$,d följare</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="one">%1$s gillar</item>
+        <item quantity="other">%1$s gillar</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="one">%1$d vald</item>
+        <item quantity="other">%1$d valda</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="one">Du har gått med i en grupp med %2$s och %1$s annan person. Ni har nu delad kontroll över musiken.</item>
+        <item quantity="other">Du har gått med i en grupp med %2$s och %1$s andra personer. Ni har nu delad kontroll över musiken.</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="one">%1$s lyssnar</item>
+        <item quantity="other">%1$s lyssnar</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="one">%1$d tim</item>
+        <item quantity="other">%1$d tim</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="one">%1$d sek</item>
+        <item quantity="other">%1$d sek</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="one">%1$,d låt har lagts till</item>
+        <item quantity="other">%1$,d låtar har lagts till</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="one">%1$s låt</item>
+        <item quantity="other">%1$s låtar</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="one">%1$s mapp</item>
+        <item quantity="other">%1$s mappar</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="one">%1$s spellista</item>
+        <item quantity="other">%1$s spellistor</item>
+    </plurals>
+</resources>

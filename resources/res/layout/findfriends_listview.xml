@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/tabs" android:visibility="gone" style="@style/StaticTabBar">
+        <TextView android:ellipsize="end" android:id="@+id/tab_text_friends" android:text="@string/find_friends_flow_friendstab_title" android:maxLines="1" style="@style/StaticTab"/>
+        <TextView android:ellipsize="end" android:id="@+id/tab_text_features" android:text="@string/find_friends_flow_featuredtab_title" android:maxLines="1" style="@style/StaticTab"/>
+    </LinearLayout>
+    <ViewStub android:gravity="center" android:id="@+id/empty_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.spotify.music.contentviewstate.view.LoadingView android:gravity="center" android:id="@+id/loading_view" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/progress" style="@style/indeterminateProgressBar"/>
+    </com.spotify.music.contentviewstate.view.LoadingView>
+    <ListView android:id="@android:id/list" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/unconnected_views" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textAppearance="?attr/pasteTextAppearance" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/findfriends_connect_fb_margin" android:layout_marginTop="@dimen/findfriends_connect_fb_margin_tb" android:layout_marginRight="@dimen/findfriends_connect_fb_margin" android:layout_marginBottom="@dimen/findfriends_connect_fb_margin_tb" android:text="@string/find_friends_flow_header_title"/>
+        <Button android:layout_gravity="center" android:id="@+id/findfriends_connect_fb_button" android:background="@drawable/findfriends_connect_fb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/find_friends_flow_facebook" android:maxLines="1" android:filterTouchesWhenObscured="false" style="?attr/pasteButtonStylePrimary"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceSecondary" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/findfriends_connect_fb_margin" android:text="@string/find_friends_flow_disclaimer"/>
+    </LinearLayout>
+</LinearLayout>

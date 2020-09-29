@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="51386930" android:versionName="8.5.27.957" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.spotify.music" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission android:name="com.spotify.music.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.spotify.music.permission.INTERNAL_BROADCAST" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.spotify.music.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.spotify.music.permission.INTERNAL_BROADCAST"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <permission android:name="com.spotify.music.permission.SECURED_BROADCAST" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.spotify.music.permission.SECURED_BROADCAST"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="com.sony.snei.np.android.account.provider.permission.DUID_READ_PROVIDER"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.samsung.WATCH_APP_TYPE.Companion"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true"/>
+    <uses-permission android:name="com.samsung.android.app.spage.permission.WRITE_CARD_DATA"/>
+    <uses-permission android:name="com.samsung.android.app.spage.permission.READ_CARD_DATA"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission-sdk-23 android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:theme="@style/Theme.Glue" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.spotify.music.SpotifyApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:fullBackupContent="@xml/remote_configuration_backup_rules" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="com.spotify.music.githash" android:value="g951e8dfd"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:value="" android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="com.google.android.gms.car.notification.SmallIcon" android:resource="@drawable/small_icon"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
+        <activity android:theme="@style/Theme.Glue.Launcher" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.spotify.music.MainActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="unspecified" android:configChanges="keyboardHidden" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MUSIC_PLAYER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.APP_MUSIC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="spotify"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="open.spotify.com"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:pathPrefix="/album"/>
+                <data android:pathPrefix="/app/browse"/>
+                <data android:pathPrefix="/artist"/>
+                <data android:pathPrefix="/autologin"/>
+                <data android:pathPrefix="/charts"/>
+                <data android:pathPrefix="/collection"/>
+                <data android:pathPrefix="/connect-device-picker"/>
+                <data android:pathPrefix="/concert"/>
+                <data android:pathPrefix="/daily-mix-hub"/>
+                <data android:pathPrefix="/episode"/>
+                <data android:pathPrefix="/follow"/>
+                <data android:pathPrefix="/hub"/>
+                <data android:pathPrefix="/made-for-you"/>
+                <data android:pathPrefix="/playlist"/>
+                <data android:pathPrefix="/radio"/>
+                <data android:pathPrefix="/running"/>
+                <data android:pathPrefix="/search"/>
+                <data android:pathPrefix="/show"/>
+                <data android:pathPrefix="/socialsession"/>
+                <data android:pathPrefix="/special"/>
+                <data android:pathPrefix="/station"/>
+                <data android:pathPrefix="/track"/>
+                <data android:pathPrefix="/user"/>
+                <data android:pathPrefix="/app/concerts"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.facebook.application.174829003346"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="open.spotify.com"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:pathPrefix="/album"/>
+                <data android:pathPrefix="/app/browse"/>
+                <data android:pathPrefix="/artist"/>
+                <data android:pathPrefix="/autologin"/>
+                <data android:pathPrefix="/charts"/>
+                <data android:pathPrefix="/collection"/>
+                <data android:pathPrefix="/concert"/>
+                <data android:pathPrefix="/daily-mix-hub"/>
+                <data android:pathPrefix="/episode"/>
+                <data android:pathPrefix="/follow"/>
+                <data android:pathPrefix="/hub"/>
+                <data android:pathPrefix="/made-for-you"/>
+                <data android:pathPrefix="/radio"/>
+                <data android:pathPrefix="/running"/>
+                <data android:pathPrefix="/search"/>
+                <data android:pathPrefix="/show"/>
+                <data android:pathPrefix="/special"/>
+                <data android:pathPrefix="/station"/>
+                <data android:pathPrefix="/track"/>
+                <data android:pathPrefix="/user"/>
+                <data android:pathPrefix="/app/concerts"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="spotify"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="www.spotify.com" android:pathPrefix="/redirect/get-premium/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="www.spotify.com" android:pathPrefix="/pair"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:host="www.spotify.com"/>
+                <data android:path="/wrapped"/>
+                <data android:pathPattern="/.*/wrapped"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="spotify"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.sonymobile.media.dashboard.BACKGROUND_ICON" android:resource="@drawable/background_icon"/>
+            <meta-data android:name="com.sonymobile.media.dashboard.TITLE" android:resource="@string/app_name"/>
+            <meta-data android:name="com.sonymobile.media.dashboard.SMALL_ICON" android:resource="@drawable/small_icon"/>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+            <intent-filter>
+                <action android:name="com.sonymobile.media.dashboard.ACTION_VIEW_MUSIC_TILE"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.mobile.android.ui.activity.PermissionsRequestActivity"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.storage.MoveCacheConfirmationActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.storage.CacheMovingIntentService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.spotlets.player.v2.NowPlayingActivity" android:launchMode="singleTop" android:screenOrientation="unspecified" android:resizeableActivity="true"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.mobile.android.ui.activity.CoverImageActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.libs.termsandconditions.TermsAndConditionsWebActivity" android:exported="false" android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.spotify.mobile.android.tos"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.mobile.android.ui.activity.ConfirmDeletionActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.features.diskalmostfull.DiskAlmostFullActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.spotlets.share.stories.ui.FacebookStoryShareLoaderActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.spotlets.share.stories.ui.SnapchatStoryShareLoaderActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.spotlets.share.stories.ui.InstagramStoryShareLoaderActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.features.checkout.web.PremiumSignupActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.moderation.ModerationReportActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.ui.activity.NotificationWebViewActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.effortlesslogin.EffortlessLoginActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.spotlets.apprater.AppRaterActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.spotlets.player.queue.QueueActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.features.settings.soundeffects.SoundEffectsWarningActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.features.settings.deletecache.StorageDeleteCacheActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.mobile.android.spotlets.waze.WazeOptOutDialogActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.mobile.android.spotlets.waze.WazeReturnActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/com_facebook_activity_theme" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:screenOrientation="unspecified" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.mobile.android.ui.activity.MarketingOptInActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.spotlets.share.facebook.MessengerShareActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.spotlets.share.facebook.FacebookFeedShareActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.builtinauth.authenticator.AccountsActivity" android:exported="false" android:taskAffinity="" android:excludeFromRecents="true" android:noHistory="true"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.spotlets.waze.WazeSlateActivity" android:exported="false" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.features.pinpairing.PinPairingActivity" android:excludeFromRecents="true" android:launchMode="singleTop" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize" android:noHistory="true"/>
+        <service android:label="@string/service_label_main" android:name="com.spotify.mobile.android.service.SpotifyService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.internal.service.DeleteCacheService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.playlist.service.PlaylistService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.spotlets.radio.service.RadioActionsService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.service.media.ExternalIntegrationService" android:enabled="true" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.service.feature.FeatureService" android:exported="false"/>
+        <service android:label="@string/app_name" android:icon="@mipmap/ic_launcher_legacy" android:name="com.spotify.music.libs.mediabrowserservice.SpotifyMediaBrowserService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+            <meta-data android:name="com.amazon.alexa.externalmediaplayer.metadata" android:resource="@raw/alexa_media_player_metadata"/>
+        </service>
+        <receiver android:name="com.spotify.music.internal.receiver.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.appprotocol.service.AppProtocolBluetoothService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.appprotocol.service.AppProtocolRemoteService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.spotify.mobile.appprotocol.action.START_APP_PROTOCOL_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.waze.WazeService" android:enabled="true" android:exported="false"/>
+        <receiver android:label="Spotify" android:name="com.spotify.music.features.widget.SpotifyWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.spotify.mobile.android.ui.widget.PREVIOUS"/>
+                <action android:name="com.spotify.mobile.android.ui.widget.PLAY"/>
+                <action android:name="com.spotify.mobile.android.ui.widget.NEXT"/>
+                <action android:name="com.spotify.mobile.android.ui.widget.BROKER"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info"/>
+        </receiver>
+        <receiver android:name="com.spotify.music.spotlets.tracker.InstallReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.spotify.mobile.android.spotlets.appprotocol.service.InterAppStartServerReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.spotify.music.service.bluetooth.action.START_APP_PROTOCOL_SERVER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.spotify.music.features.bluetoothacl.BluetoothAclReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.spotify.mobile.android.spotlets.share.ShareResultReceiver"/>
+        <receiver android:name="com.spotify.mobile.android.shortcut.ShortcutPinnedReceiver" android:exported="false"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.spotify.music.instagram" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/shareables_provider_path"/>
+        </provider>
+        <provider android:name="com.spotify.music.internal.provider.SpotifyProvider" android:exported="false" android:multiprocess="true" android:authorities="com.spotify.music"/>
+        <provider android:name="com.spotify.mobile.android.service.media.provider.MediaProvider" android:exported="true" android:authorities="@string/media_provider_authority"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="ed79a89851fe4ae8eb60f37284a088b1055997d8"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.service.flow.facebook.confirmation.FacebookUserConfirmationIntentService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.shortcut.ShortcutInstallerService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.queue.service.QueueService" android:exported="false"/>
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.features.partneraccountlinking.PartnerAccountLinkingActivity" android:exported="false" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.spotify.mobile.android.START_SAMSUNG_ACCOUNT_LINKING_FLOW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.assistedcuration.AssistedCurationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.assistedcuration.search.AssistedCurationSearchActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.editprofile.EditProfileActivity" android:launchMode="singleTop"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.music.features.connect.picker.ui.DevicePickerActivity" android:launchMode="singleTask" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.music.features.connect.dialogs.newdevice.NewDeviceActivity" android:launchMode="singleTop" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.music.features.connect.picker.contextmenu.ui.DeviceContextMenuActivity" android:launchMode="singleTask" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.music.features.connect.dialogs.SwitchDeviceActivity" android:launchMode="singleTop" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.music.features.connect.dialogs.VolumeWidgetActivity" android:launchMode="singleTask"/>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.spotify.music.features.connect.cast.CastOptionsProvider"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Fullscreen.CustomBackground" android:name="com.spotify.music.features.bmw.lockscreen.LockScreenActivity" android:screenOrientation="sensorPortrait"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.bmw.service.BmwService" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.spotify.music.features.bmw.receiver.BmwConnectedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.spotify.music.features.bmw.ACTION_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.spotify.music.features.bmw.receiver.DisconnectedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.spotify.music.features.bmw.ACTION_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.spotify.music.features.bmw.receiver.BmwConnectInstallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.bmwgroup.connected.car.app.action.CONNECTED_APP_INSTALLED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.bmwgroup.connected.car.contentprovider.AssetsProvider" android:exported="true" android:authorities="com.spotify.music.provider" android:grantUriPermissions="true"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.bixbyhomecards.BixbyHomeCardService" android:exported="false"/>
+        <provider android:name="com.spotify.mobile.android.spotlets.bixbyhomecards.cardprovider.BixbyHomeCardContentProvider" android:exported="true" android:authorities="com.spotify.music.provider.spagecardprovider"/>
+        <meta-data android:name="com.samsung.android.sdk.spage.card.info" android:resource="@xml/cards"/>
+        <meta-data android:name="com.samsung.android.sdk.spage.version" android:value="1.3.00.0"/>
+        <meta-data android:name="com.samsung.android.sdk.spage.version_code" android:value="130000000"/>
+        <receiver android:name="com.spotify.music.features.spoton.receiver.SpotOnReceiver" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.spoton.service.SpotOnService"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.music.features.accountrecovery.setpassword.SetPasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.playlistallsongs.PlaylistAllSongsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.spotlets.onboarding.mft.overlay.view.OnboardingOverlayActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/TasteOnboardingTheme" android:name="com.spotify.music.features.tasteonboarding.TasteOnboardingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.sso.AuthorizationActivity" android:exported="true" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.spotify.sso.action.START_AUTH_FLOW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.spotify.sso.action.START_GOOGLE_AUTH_FLOW_V1"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="accounts.spotify.com"/>
+                <data android:scheme="https"/>
+                <data android:pathPrefix="/inapp-authorize"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.spotify.mobile.android.sso.util.AfterLoginDummyActivity"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.editplaylist.EditPlaylistActivity" android:launchMode="singleTop" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.freetierallsongsdialog.FreeTierAllSongsDialogActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.quicksilver.qa.views.QuicksilverQAPanelActivity"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.quicksilver.qa.views.CardMessageAcceptRejectFlowActivity"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.quicksilver.qa.views.BannerMessageAcceptRejectFlowActivity"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.quicksilver.qa.views.NoteMessageAcceptRejectFlowActivity"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.quicksilver.utils.QuicksilverLoggerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.quicksilver.utils.QuicksilverPlaybackService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.ui.activity.upsell.premiumdestination.PremiumDestinationActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.ui.activity.dynamicupsell.DynamicUpsellLoggerService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.ui.activity.upsell.TrialActivationService" android:exported="false" android:stopWithTask="true"/>
+        <receiver android:name="com.spotify.mobile.android.ui.activity.upsell.PremiumActivationNotificationStyleStrategy$NotificationsIntentReceiver" android:permission="com.spotify.music.permission.SECURED_BROADCAST" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.createplaylist.CreatePlaylistActivity" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.renameplaylist.RenamePlaylistActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.mobile.android.wrapped2019.stories.container.StoriesContainerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:resizeableActivity="true"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.addtoplaylist.AddToPlaylistActivity" android:launchMode="singleTop"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.collection.service.OffliningService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.spotlets.collection.service.CollectionService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.collection.played.PlayedStateService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue" android:name="com.spotify.music.features.localfilesimport.activity.LocalFilesImportActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize|adjustPan|adjustNothing"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.cappedondemand.dialog.dialogv2.CappedOndemandDialogActivity" android:exported="false" android:launchMode="singleTop"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Fullscreen" android:name="com.spotify.music.features.fullscreen.story.FullscreenStoryActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:resizeableActivity="true"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.sociallistening.service.SocialListeningService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.music.sociallistening.dialog.SocialListeningEducationActivity" android:launchMode="singleTop" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.Dialog.Upsell" android:name="com.spotify.music.sociallistening.dialog.SocialListeningSessionEndedActivity" android:launchMode="singleTop" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.spotlets.voice.ui.VoiceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.spotlets.voice.ui.onboarding.VoiceOnboardingViewPagerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.storylines.service.StorylinesFetcher" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.feedback.service.FeedbackService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.Dialog" android:name="com.spotify.music.features.speakercompanion.entityfeedback.EntityFeedbackActivity" android:launchMode="singleTop" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.speakercompanion.resultspage.ResultsPageActivity"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.ads.voice.VoiceAdService" android:exported="false"/>
+        <activity android:theme="@style/Marquee" android:name="com.spotify.mobile.android.spotlets.ads.marquee.MarqueeActivity"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.spotlets.ads.marquee.learnmore.LearnMoreWebActivity"/>
+        <service android:label="@string/marquee_service_label" android:name="com.spotify.mobile.android.spotlets.ads.marquee.MarqueeService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.mobile.android.webbrowser.AdWebViewActivity"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.mobile.android.recentlyplayed.RecentlyPlayedService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.spotlets.radio.formatlist.RadioFormatListService" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.features.churnlockedstate.ChurnLockedStateActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Transparent" android:name="com.spotify.music.features.churnlockedstate.card.ChurnLockedStateCardDialogActivity" android:exported="false" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.placebobanner.PlaceboBannerService" android:enabled="true" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.placebobanner.BannerEventService" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@style/LanguageOnboardingTheme" android:name="com.spotify.music.features.languagepicker.LanguageOnboardingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.spotlets.scannables.view.ScannableActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.spotlets.scannables.view.ScannablesOnboardingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.features.trackcredits.TrackCreditsActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar" android:name="com.spotify.music.libs.callingcode.CallingCodePickerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.spotify.music.libs.facebook.FacebookPlaceholderActivity" android:screenOrientation="unspecified"/>
+        <activity android:name="com.spotify.music.libs.facebook.FacebookWebPermissionsActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="singleTop" android:screenOrientation="unspecified"/>
+        <receiver android:name="com.spotify.music.features.preloadnotification.PreloadNotificationReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.spotify.music.features.preloadnotification.ALARM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.libs.ageverification.AgeVerificationDialogActivity" android:exported="false" android:launchMode="singleTop"/>
+        <activity android:theme="@style/Theme.Glue.NoActionBar.Translucent" android:name="com.spotify.music.slate.SlateModalActivity" android:exported="false" android:launchMode="singleTop"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.features.reportexplicit.ReportTrackExplicitService" android:exported="false"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.music.behindthelyrics.service.BehindTheLyricsResourcesAndTracksFetcher" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <activity android:theme="@style/Theme.Glue.Launcher" android:name="com.spotify.loginflow.LoginActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.spotify.mobile.android.service.action.session.LOGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.spotify.loginflow.QuickLoginActivity" android:exported="true" android:launchMode="singleTask"/>
+        <activity android:theme="@style/Theme.Login" android:name="com.spotify.signup.splitflow.SignupActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Glue.Launcher" android:name="com.spotify.magiclink.MagicLinkActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="accounts.spotify.com"/>
+                <data android:scheme="https"/>
+                <data android:pathPrefix="/recover"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Login" android:name="com.spotify.magiclink.setpassword.MagiclinkSetPasswordActivity"/>
+        <service android:label="@string/service_label_helper" android:name="com.spotify.pushnotifications.SpotifyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/PodcastOnboardingTheme" android:name="com.spotify.podcastonboarding.PodcastOnboardingActivity" android:screenOrientation="portrait"/>
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" android:exported="false"/>
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" android:exported="false"/>
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" android:exported="false"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.spotify.music.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.CampaignTrackingReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.spotify.music.firebaseinitprovider" android:initOrder="100"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.spotify.music.workmanager-init" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.spotify.music.lifecycle-process"/>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="com.spotify.music.crashlyticsinitprovider" android:initOrder="90"/>
+        <meta-data android:name="com.google.android.wearable.beta.app" android:resource="@xml/android_wear_micro_apk"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+    </application>
+</manifest>

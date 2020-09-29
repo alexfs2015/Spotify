@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_navigation_height">54dp</dimen>
+    <dimen name="now_playing_bar_height">56dp</dimen>
+    <dimen name="player_preview_height">52dp</dimen>
+</resources>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:ellipsize="end" android:gravity="center" android:id="@+id/glue_toolbar_title" android:paddingLeft="56dp" android:paddingRight="56dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="?attr/pasteTextAppearanceBodyMediumBold"/>

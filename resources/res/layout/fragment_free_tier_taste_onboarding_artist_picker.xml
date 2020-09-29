@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:layout_gravity="bottom" android:id="@+id/black_gradient" android:background="@color/gray_background" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_heightPercent="100%" app:layout_widthPercent="100%"/>
+    <View android:layout_gravity="top" android:id="@+id/top_gradient" android:background="@drawable/bg_taste_onboarding_pink_to_blue_gradient" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_heightPercent="40%" app:layout_widthPercent="100%"/>
+    <androidx.percentlayout.widget.PercentRelativeLayout android:id="@+id/artist_picker_container" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/artist_picker_inner_container" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/header_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="?attr/pasteTextAppearanceHeadingSmall"/>
+            </LinearLayout>
+            <com.spotify.music.libs.search.view.ToolbarSearchFieldView android:id="@+id/search_toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" android:layout_marginTop="@dimen/std_8dp" android:layout_marginBottom="@dimen/std_8dp" app:backgroundCornerRadius="4dp" app:color="@color/cat_white_20" app:insetX="16dp" app:insetY="8dp"/>
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@+id/next_button_container" android:background="@drawable/free_tier_taste_onboarding_artist_picker_black_gradient" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:layout_heightPercent="20%" app:layout_widthPercent="100%">
+            <Button android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/btn_next" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_16dp" android:text="@string/free_tier_taste_onboarding_artist_picker_done" android:maxLines="1" android:filterTouchesWhenObscured="false" style="?attr/solarButtonPrimaryWhite"/>
+        </FrameLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48dp" android:indeterminate="true"/>
+</androidx.percentlayout.widget.PercentFrameLayout>

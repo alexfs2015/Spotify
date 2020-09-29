@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bg_quantified_self_module" android:paddingBottom="32dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="200dp"/>
+    <com.spotify.paste.widgets.ViewPagerIndicator android:layout_gravity="center_horizontal" android:id="@+id/page_indicator" android:layout_width="match_parent" android:layout_height="72dp" android:layout_margin="16dp" app:indicatorActiveColor="@color/white" app:indicatorInactiveColor="@color/gray_inactive"/>
+    <Button android:layout_gravity="center_horizontal" android:id="@+id/get_premium_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/offer_premium_trial_cta" android:filterTouchesWhenObscured="false" style="@style/Widget.Solar.Button.Primary.White"/>
+    <TextView android:textColor="@color/gray_70" android:textColorHighlight="@color/cat_white_40" android:textColorLink="@color/white" android:gravity="center" android:id="@+id/legal_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" style="?attr/pasteTextAppearanceMicro"/>
+</LinearLayout>
