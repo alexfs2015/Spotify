@@ -1,0 +1,137 @@
+package io.netty.handler.ssl;
+
+import java.io.ByteArrayInputStream;
+import java.math.BigInteger;
+import java.security.Principal;
+import java.security.PublicKey;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.Date;
+import java.util.Set;
+
+final class OpenSslX509Certificate extends X509Certificate {
+    private final byte[] bytes;
+    private X509Certificate wrapped;
+
+    public OpenSslX509Certificate(byte[] bArr) {
+        this.bytes = bArr;
+    }
+
+    private X509Certificate a() {
+        X509Certificate x509Certificate = this.wrapped;
+        if (x509Certificate != null) {
+            return x509Certificate;
+        }
+        try {
+            X509Certificate x509Certificate2 = (X509Certificate) wuj.g.generateCertificate(new ByteArrayInputStream(this.bytes));
+            this.wrapped = x509Certificate2;
+            return x509Certificate2;
+        } catch (CertificateException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
+    public final void checkValidity() {
+        a().checkValidity();
+    }
+
+    public final void checkValidity(Date date) {
+        a().checkValidity(date);
+    }
+
+    public final int getBasicConstraints() {
+        return a().getBasicConstraints();
+    }
+
+    public final Set<String> getCriticalExtensionOIDs() {
+        return a().getCriticalExtensionOIDs();
+    }
+
+    public final byte[] getEncoded() {
+        return (byte[]) this.bytes.clone();
+    }
+
+    public final byte[] getExtensionValue(String str) {
+        return a().getExtensionValue(str);
+    }
+
+    public final Principal getIssuerDN() {
+        return a().getIssuerDN();
+    }
+
+    public final boolean[] getIssuerUniqueID() {
+        return a().getIssuerUniqueID();
+    }
+
+    public final boolean[] getKeyUsage() {
+        return a().getKeyUsage();
+    }
+
+    public final Set<String> getNonCriticalExtensionOIDs() {
+        return a().getNonCriticalExtensionOIDs();
+    }
+
+    public final Date getNotAfter() {
+        return a().getNotAfter();
+    }
+
+    public final Date getNotBefore() {
+        return a().getNotBefore();
+    }
+
+    public final PublicKey getPublicKey() {
+        return a().getPublicKey();
+    }
+
+    public final BigInteger getSerialNumber() {
+        return a().getSerialNumber();
+    }
+
+    public final String getSigAlgName() {
+        return a().getSigAlgName();
+    }
+
+    public final String getSigAlgOID() {
+        return a().getSigAlgOID();
+    }
+
+    public final byte[] getSigAlgParams() {
+        return a().getSigAlgParams();
+    }
+
+    public final byte[] getSignature() {
+        return a().getSignature();
+    }
+
+    public final Principal getSubjectDN() {
+        return a().getSubjectDN();
+    }
+
+    public final boolean[] getSubjectUniqueID() {
+        return a().getSubjectUniqueID();
+    }
+
+    public final byte[] getTBSCertificate() {
+        return a().getTBSCertificate();
+    }
+
+    public final int getVersion() {
+        return a().getVersion();
+    }
+
+    public final boolean hasUnsupportedCriticalExtension() {
+        return a().hasUnsupportedCriticalExtension();
+    }
+
+    public final String toString() {
+        return a().toString();
+    }
+
+    public final void verify(PublicKey publicKey) {
+        a().verify(publicKey);
+    }
+
+    public final void verify(PublicKey publicKey, String str) {
+        a().verify(publicKey, str);
+    }
+}

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="one">%1$d ώρα</item>
+        <item quantity="other">%1$d ώρες</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="one">%1$d λεπτό</item>
+        <item quantity="other">%1$d λεπτά</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="one">%1$,d τραγούδι</item>
+        <item quantity="other">%1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="one">Ακολουθείς• %1$,d τραγούδι</item>
+        <item quantity="other">Ακολουθείς• %1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="one">%1$,d ημερήσια αναπαραγωγή</item>
+        <item quantity="other">%1$,d ημερήσιες αναπαραγωγές</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="one">%1$,d νέα άφιξη</item>
+        <item quantity="other">%1$,d νέες αφίξεις</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="one">Ενημερώθηκε πριν από %1$d ημέρα</item>
+        <item quantity="other">Ενημερώθηκε πριν από %1$d ημέρες</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="one">%1$d ώρα</item>
+        <item quantity="other">%1$d ώρες</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="one">%1$d λεπτό</item>
+        <item quantity="other">%1$d λεπτά</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="one">Θέλεις σίγουρα να ακολουθήσεις αυτό το %1$,d άτομο;</item>
+        <item quantity="other">Θέλεις σίγουρα να ακολουθήσεις και τα %1$,d άτομα;</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="one">%1$,d ΟΠΑΔΟΣ</item>
+        <item quantity="other">%1$,d ΟΠΑΔΟΙ</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="one">%1$,d τραγούδι</item>
+        <item quantity="other">%1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="one">%1$,d από %2$,d (%3$,d%% ολοκληρώθηκε)</item>
+        <item quantity="other">%1$,d από %2$,d (%3$,d%% ολοκληρώθηκαν)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="one">Αρέσει σε %1$,d</item>
+        <item quantity="other">Αρέσει σε %1$,d</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="one">Στείλαμε ένα SMS με τον %1$d-ψήφιο κωδικό στο %2$s.</item>
+        <item quantity="other">Στείλαμε ένα SMS με τον %1$d-ψήφιο κωδικό στο %2$s.</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="one">%1$,d φάκελος</item>
+        <item quantity="other">%1$,d φάκελοι</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="one">%1$s ΜΟΥ ΑΡΕΣΕΙ</item>
+        <item quantity="other">%1$s ΜΟΥ ΑΡΕΣΕΙ</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="one">%1$,d λίστα</item>
+        <item quantity="other">%1$,d λίστες</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="one">Αποθήκευσε %1$,d τραγούδι</item>
+        <item quantity="other">Αποθήκευσε %1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="one">Επιλέχθηκε %1$,d τραγούδι</item>
+        <item quantity="other">Επιλέχθηκαν %1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="one">%1$,d τραγούδι</item>
+        <item quantity="other">%1$,d τραγούδια</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="one">%1$,d ΕΠΕΙΣΟΔΙΟ</item>
+        <item quantity="other">%1$,d ΕΠΕΙΣΟΔΙΑ</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="one">%1$,d ΤΡΑΓΟΥΔΙ</item>
+        <item quantity="other">%1$,d ΤΡΑΓΟΥΔΙΑ</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="one">%1$,d οπαδός</item>
+        <item quantity="other">%1$,d οπαδοί</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="one">%1$,d οπαδός</item>
+        <item quantity="other">%1$,d οπαδοί</item>
+    </plurals>
+    <plurals name="profile_list_item_followers_count">
+        <item quantity="one">%1$,d ακόλουθος</item>
+        <item quantity="other">%1$,d ακόλουθοι</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="one">%1$,d οπαδός</item>
+        <item quantity="other">%1$,d οπαδοί</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="one">%1$,d ακόλουθος</item>
+        <item quantity="other">%1$,d ακόλουθοι</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="one">%1$s Like</item>
+        <item quantity="other">%1$s Like</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="one">Έχει επιλεγεί %1$d</item>
+        <item quantity="other">Έχουν επιλεγεί %1$d</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="one">Πήρες μέρος σε μια ομάδα με τον/την %2$s και %1$s ακόμη άτομα. Μπορείτε τώρα να μοιράζεστε τον έλεγχο της μουσικής.</item>
+        <item quantity="other">Πήρες μέρος σε μια ομάδα με τον/την %2$s και %1$s ακόμη άτομα. Μπορείτε τώρα να μοιράζεστε τον έλεγχο της μουσικής.</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="one">Ακούει %1$s άτομο</item>
+        <item quantity="other">Ακούνε %1$s άτομα</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="one">%1$d ώρ.</item>
+        <item quantity="other">%1$d ώρ.</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="one">%1$d λεπτ.</item>
+        <item quantity="other">%1$d λεπτ.</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="one">%1$d δευτ.</item>
+        <item quantity="other">%1$d δευτ.</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="one">%1$,d τραγούδι προστέθηκε</item>
+        <item quantity="other">%1$,d τραγούδια προστέθηκαν</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="one">%1$s τραγούδι</item>
+        <item quantity="other">%1$s τραγούδια</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="one">%1$s φάκελος</item>
+        <item quantity="other">%1$s φάκελοι</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlist</item>
+    </plurals>
+</resources>

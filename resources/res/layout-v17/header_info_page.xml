@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:gravity="center" android:id="@+id/description" android:paddingLeft="@dimen/header_info_page_margin" android:paddingRight="@dimen/header_info_page_margin" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" style="@style/TextAppearance.Cat.Description"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceMetadata" android:id="@+id/by_text" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/image" android:layout_width="@dimen/header_info_page_image_size" android:layout_height="@dimen/header_info_page_image_size" android:layout_marginTop="6dp" android:scaleType="centerCrop"/>
+        <Button android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:filterTouchesWhenObscured="false" style="?attr/pasteButtonStyleInfoSmall"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/header_info_page_margin" android:layout_marginRight="@dimen/header_info_page_margin">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceSmall" android:gravity="bottom" android:id="@+id/date" android:layout_width="0dp" android:layout_height="wrap_content" android:drawablePadding="5dp" android:layout_weight="1" android:textDirection="locale" android:textAlignment="gravity"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceSmall" android:gravity="bottom" android:id="@+id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="5dp"/>
+    </LinearLayout>
+</merge>

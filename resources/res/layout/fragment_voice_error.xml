@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/voice_activity_background" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/error_card" android:paddingTop="?android:attr/actionBarSize" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceHeroSmall" android:textColor="@color/white" android:gravity="center" android:id="@+id/content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceBodyMedium" android:textColor="@color/white" android:gravity="center" android:id="@+id/content_description" android:paddingTop="32dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp"/>
+        <Button android:textAppearance="@style/TextAppearance.Glue.Header2" android:textColor="@color/white" android:gravity="center" android:id="@+id/ok_button" android:background="@null" android:padding="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/two_button_dialog_button_ok" android:filterTouchesWhenObscured="false"/>
+    </LinearLayout>
+    <include layout="@layout/voice_mic_button"/>
+</RelativeLayout>

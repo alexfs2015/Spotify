@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <FrameLayout android:layout_gravity="center" android:id="@+id/camera_preview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.spotify.music.spotlets.scannables.view.ViewfinderView android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:gravity="center_horizontal" android:id="@+id/txt_scannable_instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/std_8dp" android:text="@string/scannables_viewfinder_hint" style="@style/Widget.Glue.TextView"/>
+        <Button android:id="@+id/scannable_select_from_photos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/std_8dp" android:text="@string/scannables_open_gallery_button" android:filterTouchesWhenObscured="false" style="@style/Widget.Glue.Button.Secondary"/>
+        <TextView android:textAppearance="@style/TextAppearance.Cat.Secondary.Muted" android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/social_listening_privacy_notice" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/std_8dp" android:text="@string/scannables_social_listening_privacy_notice"/>
+    </LinearLayout>
+    <ImageButton android:layout_gravity="end" android:id="@+id/scannable_cancel" android:background="@null" android:layout_width="@dimen/actionbar_search_img_width" android:layout_height="@dimen/actionbar_search_img_width"/>
+</merge>

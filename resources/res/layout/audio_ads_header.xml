@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.spotify.music.nowplaying.common.view.close.CloseButton android:id="@+id/audio_ads_close_button" android:padding="@dimen/player_v2_button_padding" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" android:contentDescription="@string/player_content_description_close"/>
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/audio_ads_header_title_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="36dp" android:layout_marginRight="36dp">
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:textAppearance="@style/AudioAdsSubtitle" android:gravity="center_horizontal" android:id="@+id/audio_ads_title" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" android:text="@string/audio_ads_header_title" style="@style/PlayerSubtitle"/>
+        <com.spotify.mobile.android.spotlets.player.views.MarqueeTextView android:textAppearance="@style/AudioAdsTitle" android:gravity="center_horizontal" android:id="@+id/audio_ads_advertiser" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" style="@style/PlayerTitle"/>
+    </LinearLayout>
+</FrameLayout>

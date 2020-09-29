@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/static_entity_layout" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/static_release_feed_item"/>
+    <FrameLayout android:id="@+id/expandable_footer" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+        <LinearLayout android:orientation="vertical" android:id="@+id/item_track_holder" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <include android:layout_gravity="bottom" android:id="@+id/footer_layout" android:layout_width="match_parent" android:layout_height="35dp" layout="@layout/item_footer_view"/>
+        <View android:layout_gravity="top" android:background="@color/gray_50" android:layout_width="match_parent" android:layout_height="1dp"/>
+    </FrameLayout>
+</LinearLayout>

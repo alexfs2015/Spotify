@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:gravity="center_horizontal" android:id="@+id/marketing_opt_in_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/marketing_opt_in_dialog_content"/>
+    <TextView android:textColorHighlight="@color/green" android:gravity="center_horizontal" android:id="@+id/contact_us_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+</LinearLayout>

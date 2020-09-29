@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:background="@color/cat_dark_red" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+        <TextView android:textAppearance="?attr/pasteActionBarTitleTextAppearance" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/churn_locked_state_title"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="0px" android:layout_height="0px" android:layout_weight="1"/>
+            <com.spotify.paste.spotifyicon.SpotifyIconView android:layout_gravity="center_horizontal" android:layout_width="70dp" android:layout_height="70dp" android:layout_marginBottom="16dp" app:iconType="1029"/>
+            <TextView android:textSize="20sp" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="@string/churn_locked_state_heading" app:fontAsset="?attr/glueFontSemibold"/>
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:maxWidth="@dimen/churn_locked_state_max_width" android:text="@string/churn_locked_state_description"/>
+            <Button android:layout_gravity="center_horizontal" android:id="@+id/update_payment_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/churn_locked_state_action" android:filterTouchesWhenObscured="false" style="@style/Widget.Cat.Button.Primary"/>
+            <Space android:layout_width="0px" android:layout_height="0px" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColorLink="@color/cat_medium_green" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/cancel_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/churn_locked_state_max_width"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

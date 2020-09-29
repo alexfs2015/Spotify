@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/gray_layer" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/onboarding_pager" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <com.spotify.paste.widgets.ViewPagerIndicator android:layout_gravity="center_horizontal" android:id="@+id/page_indicator" android:layout_width="match_parent" android:layout_height="72dp" android:layout_margin="@dimen/std_16dp" app:indicatorActiveColor="@color/white" app:indicatorInactiveColor="@color/gray_inactive"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar android:layout_gravity="top" android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" android:layout_margin="@dimen/std_8dp"/>
+</merge>

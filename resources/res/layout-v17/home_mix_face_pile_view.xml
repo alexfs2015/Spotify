@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <com.spotify.music.features.homemix.facepile.FaceView android:layout_gravity="center" android:id="@+id/face_pile_first" android:layout_width="30dp" android:layout_height="30dp" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+    <com.spotify.music.features.homemix.facepile.FaceView android:layout_gravity="center" android:id="@+id/face_pile_second" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="@dimen/face_pile_margin" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_marginStart="@dimen/face_pile_margin"/>
+</LinearLayout>

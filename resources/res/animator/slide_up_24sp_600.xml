@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:duration="600" android:valueFrom="@dimen/decade_top_song_artist_text_translation_y" android:valueTo="0sp" android:valueType="floatType" android:propertyName="translationY"/>

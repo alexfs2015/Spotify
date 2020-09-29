@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <include layout="@layout/btl_intro_card"/>
+    <include layout="@layout/btl_card"/>
+    <include layout="@layout/btl_credits_card"/>
+</merge>

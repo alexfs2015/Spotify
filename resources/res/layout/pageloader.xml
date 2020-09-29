@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <FrameLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true"/>
+    <TextView android:textAppearance="@style/TextAppearance.Tokens.Finale" android:textSize="8sp" android:textColor="@color/white" android:id="@+id/debug_error_text" android:padding="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:shadowColor="@color/black" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="7"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/toast" android:background="@drawable/pageloader_toast_bg" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <TextView android:textAppearance="@style/TextAppearance.Tokens.Mesto" android:textColor="@color/black" android:id="@+id/toast_text" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="3" android:layout_weight="1"/>
+        <Button android:id="@+id/toast_button" android:paddingLeft="0dp" android:paddingRight="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" android:filterTouchesWhenObscured="false" app:pasteTextBaseColor="@color/green" style="@style/Widget.Solar.Button.Secondary.Light"/>
+    </LinearLayout>
+</merge>

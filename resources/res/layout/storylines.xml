@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <include android:id="@+id/loading_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/widget_padding" layout="@layout/storylines_loading_view"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/error_view" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceBodyMediumBold" android:textSize="24sp" android:gravity="center" android:layout_gravity="center" android:id="@+id/error_title" android:layout_width="240dp" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?attr/pasteTextAppearanceMicro" android:textColor="@color/error_message_text_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/error_message" android:layout_width="240dp" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+    <com.spotify.paste.widgets.carousel.CarouselView android:id="@+id/carousel" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <View android:id="@+id/reverse" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.4"/>
+        <View android:id="@+id/skip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.6"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/widget_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="top|left|center_vertical|center_horizontal|center|start" android:id="@+id/header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:layout_marginBottom="0dp" android:text="@string/storylines_header" android:textAllCaps="true" style="@style/ScrollWidgetHeader"/>
+        <com.spotify.android.stories.view.StoriesProgressView android:layout_gravity="center_vertical" android:id="@+id/progress_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:alpha="0" app:progressBackgroundColor="@color/cat_white_40" app:progressColor="@color/cat_white"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/artist_attribution" android:padding="@dimen/widget_padding" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:alpha="0" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/follow_button" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintWidth_default="1">
+            <ImageView android:layout_gravity="center" android:id="@+id/artist_avatar" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="8dp" android:scaleType="centerCrop"/>
+            <TextView android:textAppearance="?attr/pasteTextAppearanceBodySmall" android:ellipsize="end" android:layout_gravity="center" android:id="@+id/storylines_by" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        </LinearLayout>
+        <ToggleButton android:ellipsize="end" android:layout_gravity="center" android:id="@+id/follow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/widget_padding" android:alpha="0" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" style="?attr/pasteButtonStyleSmall"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

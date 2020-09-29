@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="48dp" android:layout_height="48dp"/>
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@+id/tvTitle_placeboBannerTwoButtons" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:fontAsset="?attr/glueFontSemibold"/>
+        <com.spotify.paste.spotifyicon.SpotifyIconView android:id="@+id/ivClose_placeboBannerTwoButtons" android:background="?android:attr/selectableItemBackground" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerInside" android:contentDescription="@string/generic_content_description_close" app:iconType="1040"/>
+    </LinearLayout>
+    <TextView android:gravity="center_horizontal" android:id="@+id/tvDescription_placeboBannerTwoButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginBottom="8dp"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp">
+        <Button android:gravity="center" android:layout_gravity="center" android:id="@+id/btnCtaLeft_placeboBannerTwoButtons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:filterTouchesWhenObscured="false" style="?attr/pasteButtonStyleInfoSmall"/>
+        <androidx.legacy.widget.Space android:layout_width="@dimen/std_8dp" android:layout_height="wrap_content"/>
+        <Button android:gravity="center" android:layout_gravity="center" android:id="@+id/btnCtaRight_placeboBannerTwoButtons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:filterTouchesWhenObscured="false" style="?attr/pasteButtonStyleInfoSmall"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:insetRight="48dp" android:insetTop="16dp" android:insetBottom="4dp">
+    <shape>
+        <corners android:radius="@dimen/std_16dp"/>
+        <solid android:color="@color/pivots_loading_color"/>
+    </shape>
+</inset>

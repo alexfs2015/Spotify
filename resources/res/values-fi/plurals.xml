@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="one">%1$d t</item>
+        <item quantity="other">%1$d t</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="one">%1$,d SEURAAJA</item>
+        <item quantity="other">%1$,d SEURAAJAA</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="one">%1$,d SEURAAJA</item>
+        <item quantity="other">%1$,d SEURAAJAA</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="one">%1$,d kappale</item>
+        <item quantity="other">%1$,d kappaletta</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="one">Seurataan • %1$,d kappaletta</item>
+        <item quantity="other">Seurataan • %1$,d kappaletta</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="one">%1$,d päivittäinen toisto</item>
+        <item quantity="other">%1$,d päivittäistä toistoa</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="one">%1$,d uusi merkintä</item>
+        <item quantity="other">%1$,d uutta merkintää</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="one">Päivitetty %1$d päivä sitten</item>
+        <item quantity="other">Päivitetty %1$d päivää sitten</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="one">%1$d tunti</item>
+        <item quantity="other">%1$d tuntia</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="one">%1$d minuutti</item>
+        <item quantity="other">%1$d minuuttia</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="one">Haluatko varmasti seurata kaikkia %1$,d henkilöä?</item>
+        <item quantity="other">Haluatko varmasti seurata kaikkia %1$,d henkilöä?</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="one">%1$,d SEURAAJA</item>
+        <item quantity="other">%1$,d SEURAAJAA</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="one">%1$,d kappale</item>
+        <item quantity="other">%1$,d kappaletta</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="one">%1$,d/%2$,d (%3$,d %% valmis)</item>
+        <item quantity="other">%1$,d/%2$,d (%3$,d %% valmis)</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="one">%1$,d tykkäys</item>
+        <item quantity="other">%1$,d tykkäystä</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="one">Lähetimme %1$d-numeroisen koodin tekstiviestillä numeroon %2$s.</item>
+        <item quantity="other">Lähetimme %1$d-numeroisen koodin tekstiviestillä numeroon %2$s.</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="one">%1$,d kansio</item>
+        <item quantity="other">%1$,d kansiota</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="one">%1$s TYKKÄYS</item>
+        <item quantity="other">%1$s TYKKÄYSTÄ</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="one">%1$,d soittolista</item>
+        <item quantity="other">%1$,d soittolistaa</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="one">Tallenna %1$,d kappale</item>
+        <item quantity="other">Tallenna %1$,d kappaletta</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="one">%1$,d valittu kappale</item>
+        <item quantity="other">%1$,d valittua kappaletta</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="one">%1$,d kappale</item>
+        <item quantity="other">%1$,d kappaletta</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="one">%1$,d JAKSO</item>
+        <item quantity="other">%1$,d JAKSOA</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="one">%1$,d KAPPALE</item>
+        <item quantity="other">%1$,d KAPPALETTA</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="one">%1$,d seuraaja</item>
+        <item quantity="other">%1$,d seuraajaa</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="one">%1$,d seuraaja</item>
+        <item quantity="other">%1$,d seuraajaa</item>
+    </plurals>
+    <plurals name="profile_list_item_followers_count">
+        <item quantity="one">%1$,d seuraaja</item>
+        <item quantity="other">%1$,d seuraajaa</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="one">%1$,d seuraaja</item>
+        <item quantity="other">%1$,d seuraajaa</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="one">%1$,d seuraaja</item>
+        <item quantity="other">%1$,d seuraajaa</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="one">%1$s tykkäys</item>
+        <item quantity="other">%1$s tykkäystä</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="one">%1$d valittu</item>
+        <item quantity="other">%1$d valittu</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="one">Liityit ryhmään, jossa on %2$s ja %1$s muu henkilö. Voitte nyt hallita musiikkia yhdessä.</item>
+        <item quantity="other">Liityit ryhmään, jossa on %2$s ja %1$s muuta henkilöä. Voitte nyt hallita musiikkia yhdessä.</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="one">%1$s kuuntelee</item>
+        <item quantity="other">%1$s kuuntelee</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="one">%1$d h</item>
+        <item quantity="other">%1$d h</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="one">%1$d s</item>
+        <item quantity="other">%1$d s</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="one">%1$,d kappale lisätty</item>
+        <item quantity="other">%1$,d kappaletta lisätty</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="one">%1$s kappale</item>
+        <item quantity="other">%1$s kappaletta</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="one">%1$s kansio</item>
+        <item quantity="other">%1$s kansiota</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="one">%1$s soittolista</item>
+        <item quantity="other">%1$s soittolistaa</item>
+    </plurals>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <FrameLayout android:id="@+id/child_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <TextView android:textSize="25sp" android:textColor="#0000ff00" android:layout_gravity="center" android:id="@+id/accept_card_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_accept" android:rotation="-30"/>
+    <TextView android:textSize="25sp" android:textColor="#00ff0000" android:layout_gravity="center" android:id="@+id/reject_card_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_reject" android:rotation="30"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/accept_reject_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:baselineAligned="false">
+        <FrameLayout android:id="@+id/reject_tap_area" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <FrameLayout android:id="@+id/accept_tap_area" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+    </LinearLayout>
+</merge>

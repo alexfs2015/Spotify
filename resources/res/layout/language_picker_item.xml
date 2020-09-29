@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.music.features.languagepicker.view.RoundedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="0dp" android:layout_margin="@dimen/grid_item_spacing_half">
+    <ImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null"/>
+    <View android:id="@+id/overlay" android:background="@color/cat_black_40" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null"/>
+    <FrameLayout android:padding="@dimen/language_item_content_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <TextView android:textAppearance="?attr/pasteTextAppearanceBodyMediumBold" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/language" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/icon" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:contentDescription="@null"/>
+    </FrameLayout>
+</com.spotify.music.features.languagepicker.view.RoundedRelativeLayout>

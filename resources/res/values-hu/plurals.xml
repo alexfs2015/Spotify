@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="android_auto_podcast_episode_time_format_hours">
+        <item quantity="one">%1$d óra</item>
+        <item quantity="other">%1$d óra</item>
+    </plurals>
+    <plurals name="android_auto_podcast_episode_time_format_min">
+        <item quantity="one">%1$d perc</item>
+        <item quantity="other">%1$d perc</item>
+    </plurals>
+    <plurals name="artist_header_followers_count">
+        <item quantity="one">%1$,d KÖVETŐ</item>
+        <item quantity="other">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="artist_playlist_followers_count">
+        <item quantity="one">%1$,d KÖVETŐ</item>
+        <item quantity="other">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count">
+        <item quantity="one">%1$,d dal</item>
+        <item quantity="other">%1$,d dal</item>
+    </plurals>
+    <plurals name="cell_tracks_in_collection_count_artist_is_followed">
+        <item quantity="one">•%1$,d dalt követsz</item>
+        <item quantity="other">•%1$,d dalt követsz</item>
+    </plurals>
+    <plurals name="charts_daily_plays">
+        <item quantity="one">%1$,d lejátszás naponta</item>
+        <item quantity="other">%1$,d lejátszás naponta</item>
+    </plurals>
+    <plurals name="charts_header_new_entry_count">
+        <item quantity="one">%1$,d új szereplő</item>
+        <item quantity="other">%1$,d új szereplő</item>
+    </plurals>
+    <plurals name="collection_podcast_updated_days_ago">
+        <item quantity="one">%1$d napja frissült</item>
+        <item quantity="other">%1$d napja frissült</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_hours">
+        <item quantity="one">%1$d óra</item>
+        <item quantity="other">%1$d óra</item>
+    </plurals>
+    <plurals name="context_menu_sleep_timer_mins">
+        <item quantity="one">%1$d perc</item>
+        <item quantity="other">%1$d perc</item>
+    </plurals>
+    <plurals name="find_friends_flow_confirm_desc">
+        <item quantity="one">Biztosan követni szeretnéd mind a(z) %1$,d ismerősöd?</item>
+        <item quantity="other">Biztosan követni szeretnéd mind a(z) %1$,d ismerősöd?</item>
+    </plurals>
+    <plurals name="header_playlist_followers_count">
+        <item quantity="one">%1$,d KÖVETŐ</item>
+        <item quantity="other">%1$,d KÖVETŐ</item>
+    </plurals>
+    <plurals name="mobile_artist_tracks_count">
+        <item quantity="one">%1$,d dal</item>
+        <item quantity="other">%1$,d dal</item>
+    </plurals>
+    <plurals name="notification_syncing_text">
+        <item quantity="one">%1$,d/%2$,d (%3$,d%%) kész</item>
+        <item quantity="other">%1$,d/%2$,d (%3$,d%%) kész</item>
+    </plurals>
+    <plurals name="other_user_profile_playlist_likes">
+        <item quantity="one">%1$,d ember kedveli</item>
+        <item quantity="other">%1$,d ember kedveli</item>
+    </plurals>
+    <plurals name="otp_description">
+        <item quantity="one">%1$d jegyű kódot tartalmazó SMS-t küldtünk a(z) %2$s telefonszámra.</item>
+        <item quantity="other">%1$d jegyű kódot tartalmazó SMS-t küldtünk a(z) %2$s telefonszámra.</item>
+    </plurals>
+    <plurals name="playlist_folder_count">
+        <item quantity="one">%1$,d mappa</item>
+        <item quantity="other">%1$,d mappa</item>
+    </plurals>
+    <plurals name="playlist_header_subtitle_likes">
+        <item quantity="one">%1$s KEDVELÉS</item>
+        <item quantity="other">%1$s KEDVELÉS</item>
+    </plurals>
+    <plurals name="playlist_playlist_count">
+        <item quantity="one">%1$,d lejátszási lista</item>
+        <item quantity="other">%1$,d lejátszási lista</item>
+    </plurals>
+    <plurals name="playlist_toolbar_add_to_collection_items">
+        <item quantity="one">%1$,d dal mentése</item>
+        <item quantity="other">%1$,d dal mentése</item>
+    </plurals>
+    <plurals name="playlist_toolbar_menu_selected_songs">
+        <item quantity="one">%1$,d dal kiválasztva</item>
+        <item quantity="other">%1$,d dal kiválasztva</item>
+    </plurals>
+    <plurals name="playlist_track_count">
+        <item quantity="one">%1$,d szám</item>
+        <item quantity="other">%1$,d szám</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_episodes">
+        <item quantity="one">%1$,d EPIZÓD</item>
+        <item quantity="other">%1$,d EPIZÓD</item>
+    </plurals>
+    <plurals name="playlist_trackcloud_includes_label_songs">
+        <item quantity="one">%1$,d DAL</item>
+        <item quantity="other">%1$,d DAL</item>
+    </plurals>
+    <plurals name="profile_artist_followers">
+        <item quantity="one">%1$,d követő</item>
+        <item quantity="other">%1$,d követő</item>
+    </plurals>
+    <plurals name="profile_list_followers_count">
+        <item quantity="one">%1$,d követő</item>
+        <item quantity="other">%1$,d követő</item>
+    </plurals>
+    <plurals name="profile_list_item_followers_count">
+        <item quantity="one">%1$,d követő</item>
+        <item quantity="other">%1$,d követő</item>
+    </plurals>
+    <plurals name="profile_playlist_followers">
+        <item quantity="one">%1$,d követő</item>
+        <item quantity="other">%1$,d követő</item>
+    </plurals>
+    <plurals name="refresh_header_followers_count">
+        <item quantity="one">%1$,d követő</item>
+        <item quantity="other">%1$,d követő</item>
+    </plurals>
+    <plurals name="refresh_header_likes_count">
+        <item quantity="one">%1$s kedvelés</item>
+        <item quantity="other">%1$s kedvelés</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="one">%1$d kiválasztva</item>
+        <item quantity="other">%1$d kiválasztva</item>
+    </plurals>
+    <plurals name="social_listening_notification_snack_joined_existing_session">
+        <item quantity="one">Csatlakoztál %2$s csoportos zenehallgatásához még %1$s másik személlyel együtt. Mostantól osztoztok a zene vezérlésén.</item>
+        <item quantity="other">Csatlakoztál %2$s csoportos zenehallgatásához még %1$s másik személlyel együtt. Mostantól osztoztok a zene vezérlésén.</item>
+    </plurals>
+    <plurals name="social_listening_participants_listening">
+        <item quantity="one">%1$s hallgató</item>
+        <item quantity="other">%1$s hallgató</item>
+    </plurals>
+    <plurals name="time_format_hours">
+        <item quantity="one">%1$d óra</item>
+        <item quantity="other">%1$d óra</item>
+    </plurals>
+    <plurals name="time_format_min">
+        <item quantity="one">%1$d perc</item>
+        <item quantity="other">%1$d perc</item>
+    </plurals>
+    <plurals name="time_format_sec">
+        <item quantity="one">%1$d mp</item>
+        <item quantity="other">%1$d mp</item>
+    </plurals>
+    <plurals name="toast_imported_to_collection">
+        <item quantity="one">%1$,d dal hozzáadva</item>
+        <item quantity="other">%1$,d dal hozzáadva</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_artist_tracks_in_collection_subtitle">
+        <item quantity="one">%1$s dal</item>
+        <item quantity="other">%1$s dal</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_folders_count_subtitle">
+        <item quantity="one">%1$s mappa</item>
+        <item quantity="other">%1$s mappa</item>
+    </plurals>
+    <plurals name="your_library_music_pages_row_folder_subtitle">
+        <item quantity="one">%1$s műsorlista</item>
+        <item quantity="other">%1$s műsorlista</item>
+    </plurals>
+</resources>

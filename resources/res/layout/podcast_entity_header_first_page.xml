@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.android.glue.patterns.header.headers.NonOverlappingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.spotify.paste.widgets.FlexibleSquareImageView android:layout_gravity="center" android:id="@+id/header_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:scaleType="centerCrop" android:minWidth="160dp" app:widthFraction="@fraction/header_cover_art_screen_width_percentage"/>
+        <com.spotify.android.glue.internal.StateListAnimatorImageView android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/cover_art_accessory" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <TextView android:textAppearance="?attr/pasteTextAppearanceHeaderMedium" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/header_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:maxLines="2"/>
+    <TextView android:textAppearance="?attr/pasteTextAppearanceMetadata" android:textColor="?android:attr/textColorSecondary" android:id="@+id/header_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+</com.spotify.android.glue.patterns.header.headers.NonOverlappingLinearLayout>

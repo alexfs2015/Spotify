@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="connect_picker_max_columns">6</integer>
+    <integer name="context_menu_initial_visible_items">5</integer>
+    <integer name="genre_list_columns">3</integer>
+    <integer name="grid_columns">@integer/grid_columns_land</integer>
+    <integer name="hugs_grid_columns">@integer/hugs_grid_columns_land</integer>
+</resources>

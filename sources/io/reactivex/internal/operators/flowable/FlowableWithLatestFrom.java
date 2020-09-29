@@ -1,0 +1,116 @@
+package io.reactivex.internal.operators.flowable;
+
+import io.reactivex.Flowable;
+import io.reactivex.FlowableSubscriber;
+import io.reactivex.exceptions.Exceptions;
+import io.reactivex.functions.BiFunction;
+import io.reactivex.internal.functions.ObjectHelper;
+import io.reactivex.internal.fuseable.ConditionalSubscriber;
+import io.reactivex.internal.subscriptions.SubscriptionHelper;
+import io.reactivex.subscribers.SerializedSubscriber;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
+
+public final class FlowableWithLatestFrom<T, U, R> extends AbstractFlowableWithUpstream<T, R> {
+    private BiFunction<? super T, ? super U, ? extends R> c;
+    private xfk<? extends U> d;
+
+    final class FlowableWithLatestSubscriber implements FlowableSubscriber<U> {
+        private final WithLatestFromSubscriber<T, U, R> a;
+
+        FlowableWithLatestSubscriber(WithLatestFromSubscriber<T, U, R> withLatestFromSubscriber) {
+            this.a = withLatestFromSubscriber;
+        }
+
+        public final void a(xfm xfm) {
+            if (SubscriptionHelper.a(this.a.other, xfm)) {
+                xfm.a(Long.MAX_VALUE);
+            }
+        }
+
+        public final void b_(U u) {
+            this.a.lazySet(u);
+        }
+
+        public final void c() {
+        }
+
+        public final void onError(Throwable th) {
+            WithLatestFromSubscriber<T, U, R> withLatestFromSubscriber = this.a;
+            SubscriptionHelper.a(withLatestFromSubscriber.upstream);
+            withLatestFromSubscriber.downstream.onError(th);
+        }
+    }
+
+    static final class WithLatestFromSubscriber<T, U, R> extends AtomicReference<U> implements ConditionalSubscriber<T>, xfm {
+        private static final long serialVersionUID = -312246233408980075L;
+        final BiFunction<? super T, ? super U, ? extends R> combiner;
+        final xfl<? super R> downstream;
+        final AtomicReference<xfm> other = new AtomicReference<>();
+        final AtomicLong requested = new AtomicLong();
+        final AtomicReference<xfm> upstream = new AtomicReference<>();
+
+        WithLatestFromSubscriber(xfl<? super R> xfl, BiFunction<? super T, ? super U, ? extends R> biFunction) {
+            this.downstream = xfl;
+            this.combiner = biFunction;
+        }
+
+        public final void a() {
+            SubscriptionHelper.a(this.upstream);
+            SubscriptionHelper.a(this.other);
+        }
+
+        public final void a(long j) {
+            SubscriptionHelper.a(this.upstream, this.requested, j);
+        }
+
+        public final void a(xfm xfm) {
+            SubscriptionHelper.a(this.upstream, this.requested, xfm);
+        }
+
+        public final boolean b(T t) {
+            Object obj = get();
+            if (obj != null) {
+                try {
+                    this.downstream.b_(ObjectHelper.a(this.combiner.apply(t, obj), "The combiner returned a null value"));
+                    return true;
+                } catch (Throwable th) {
+                    Exceptions.b(th);
+                    a();
+                    this.downstream.onError(th);
+                }
+            }
+            return false;
+        }
+
+        public final void b_(T t) {
+            if (!b(t)) {
+                ((xfm) this.upstream.get()).a(1);
+            }
+        }
+
+        public final void c() {
+            SubscriptionHelper.a(this.other);
+            this.downstream.c();
+        }
+
+        public final void onError(Throwable th) {
+            SubscriptionHelper.a(this.other);
+            this.downstream.onError(th);
+        }
+    }
+
+    public FlowableWithLatestFrom(Flowable<T> flowable, BiFunction<? super T, ? super U, ? extends R> biFunction, xfk<? extends U> xfk) {
+        super(flowable);
+        this.c = biFunction;
+        this.d = xfk;
+    }
+
+    public final void a(xfl<? super R> xfl) {
+        SerializedSubscriber serializedSubscriber = new SerializedSubscriber(xfl);
+        WithLatestFromSubscriber withLatestFromSubscriber = new WithLatestFromSubscriber(serializedSubscriber, this.c);
+        serializedSubscriber.a((xfm) withLatestFromSubscriber);
+        this.d.b(new FlowableWithLatestSubscriber(withLatestFromSubscriber));
+        this.b.a((FlowableSubscriber<? super T>) withLatestFromSubscriber);
+    }
+}

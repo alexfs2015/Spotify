@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="100dp" android:width="234dp" android:viewportWidth="234" android:viewportHeight="100">
+    <path android:fillColor="#ffffffff" android:pathData="M 4 0 L 230 0 Q 234 0 234 4 L 234 96 Q 234 100 230 100 L 4 100 Q 0 100 0 96 L 0 4 Q 0 0 4 0 Z"/>
+    <path android:fillColor="#ff808080" android:pathData="M 17.18 18.61 H 49.18 V 50.61 H 17.18 V 18.61 Z" android:strokeWidth="1" android:strokeAlpha="0" android:fillAlpha="0"/>
+    <path android:fillColor="#ff808080" android:pathData="M43.18,31.61v2.5h0a10.5,10.5,0,0,1-21,0h0v-2.5h-1v2.5h0a11.53,11.53,0,0,0,11,11.47v4h1v-4a11.53,11.53,0,0,0,11-11.47h0v-2.5h-1Zm-10.5,9a6.52,6.52,0,0,0,6.5-6.5v-8a6.5,6.5,0,1,0-13,0v8A6.52,6.52,0,0,0,32.68,40.61Zm-5.5-14.5a5.5,5.5,0,1,1,11,0v8a5.5,5.5,0,0,1-11,0v-8Z" android:strokeWidth="1"/>
+    <path android:fillColor="#ffd9d9d9" android:pathData="M 57 19 H 207 V 29 H 57 V 19 Z"/>
+    <path android:fillColor="#ffd9d9d9" android:pathData="M 57 39.61 H 167.43 V 49.61 H 57 V 39.61 Z"/>
+    <path android:fillColor="#ff808080" android:pathData="M174.53,81h-3.74L170,83.11h-1.9l3.54-9.22h2.08l3.51,9.22h-2Zm-3.15-1.64h2.55l-1.27-3.48Z" android:strokeWidth="1"/>
+    <path android:fillColor="#ff808080" android:pathData="M178.58,83.11V73.89h1.79v7.5h4.11v1.71h-5.9Z" android:strokeWidth="1"/>
+    <path android:fillColor="#ff808080" android:pathData="M185.9,83.11V73.89h1.79v7.5h4.11v1.71h-5.9Z" android:strokeWidth="1"/>
+    <path android:fillColor="#ff808080" android:pathData="M197.12,73.7a4.8,4.8,0,1,1-4.73,4.81A4.65,4.65,0,0,1,197.12,73.7Zm0,7.86a3.07,3.07,0,1,0-2.87-3.07A2.85,2.85,0,0,0,197.12,81.56Z" android:strokeWidth="1"/>
+    <path android:fillColor="#ff808080" android:pathData="M213.79,73.89h1.83l-2.55,9.22h-1.85l-2.11-6.56L207,83.11h-1.87l-2.56-9.22h1.9l1.69,6.34,2-6.34h1.86l2.05,6.37Z" android:strokeWidth="1"/>
+</vector>

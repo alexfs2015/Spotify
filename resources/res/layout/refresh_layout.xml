@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spotify.music.features.dailymix.itemlist.RefreshRow xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/header" android:background="?attr/pasteColorSubHeaderBackground" android:paddingLeft="@dimen/refresh_row_button_margin" android:paddingRight="@dimen/refresh_row_button_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:id="@+id/button_refresh_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/refresh_row_content_height">
+        <TextView android:textAppearance="?attr/pasteTextAppearance" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/refresh_copy" android:layout_weight="1"/>
+    </LinearLayout>
+</com.spotify.music.features.dailymix.itemlist.RefreshRow>

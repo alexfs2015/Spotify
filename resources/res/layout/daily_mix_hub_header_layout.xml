@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?attr/pasteTextAppearanceHeaderLarge" android:textSize="36sp" android:textColor="?attr/glueSectionHeaderTitleColor" android:ellipsize="end" android:gravity="center" android:id="@+id/header_title_text" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:layout_marginBottom="16dp" android:maxLines="2" android:lineSpacingExtra="32dp" android:lineSpacingMultiplier="0"/>
+    <Button android:layout_gravity="center" android:id="@+id/play_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:filterTouchesWhenObscured="false" style="@style/Widget.Solar.Button.Primary.Green"/>
+</LinearLayout>

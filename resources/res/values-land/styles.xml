@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CoverImage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="TextAppearance.Cat.Description">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/cat_text_primary</item>
+        <item name="android:textColorLink">@color/cat_text_link</item>
+        <item name="fontAsset">?attr/glueFontRegular</item>
+    </style>
+    <style name="Widget.Design.TabLayout">
+        <item name="tabGravity">1</item>
+        <item name="tabMode">1</item>
+    </style>
+    <style name="Widget.Header.Metadata">
+        <item name="android:textAppearance">?attr/pasteTextAppearanceMetadata</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">96dp</item>
+        <item name="android:paddingRight">96dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Widget.Header.Metadata.Small.Left">
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">32dp</item>
+    </style>
+    <style name="Widget.Header.Subtitle">
+        <item name="android:textAppearance">?attr/pasteTextAppearanceBodySmall</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">64dp</item>
+        <item name="android:paddingRight">64dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="Widget.Header.Subtitle.Small.Left">
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">32dp</item>
+    </style>
+    <style name="Widget.Header.Title">
+        <item name="android:textAppearance">?attr/pasteTextAppearanceHeaderLarge</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">64dp</item>
+        <item name="android:paddingRight">64dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="minimumTextSize">12sp</item>
+        <item name="sizeToFit">true</item>
+    </style>
+    <style name="Widget.Header.Title.Small">
+        <item name="android:textAppearance">?attr/pasteTextAppearanceHeaderLarge</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="Widget.Header.Title.Small.Left">
+    </style>
+</resources>

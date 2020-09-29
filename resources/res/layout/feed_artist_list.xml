@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?attr/pasteTextAppearanceHeaderSmall" android:gravity="left|center_vertical|center_horizontal|center|start" android:paddingLeft="@dimen/std_16dp" android:paddingRight="@dimen/std_16dp" android:layout_width="match_parent" android:layout_height="?android:attr/listPreferredItemHeightSmall" android:text="@string/feed_artist_to_follow"/>
+    <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@android:id/list" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/artist_list_item_height" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>

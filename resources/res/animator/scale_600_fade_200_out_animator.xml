@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defpackage.set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:ordering="together">
+    <objectAnimator android:duration="600" android:valueFrom="1" android:valueTo="0.1" android:valueType="floatType" android:propertyName="scaleX"/>
+    <objectAnimator android:duration="600" android:valueFrom="1" android:valueTo="0.1" android:valueType="floatType" android:propertyName="scaleY"/>
+    <objectAnimator android:duration="200" android:startOffset="400" android:valueFrom="1f" android:valueTo="0f" android:valueType="floatType" android:propertyName="alpha"/>
+</defpackage.set>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingLeft="16dp" android:paddingTop="2dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/sponsorship_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/std_8dp" android:maxLines="2" android:minLines="2" android:includeFontPadding="false"/>
+    <FrameLayout android:id="@+id/image_container" android:layout_width="160dp" android:layout_height="160dp" android:layout_marginBottom="5dp">
+        <com.spotify.paste.widgets.internal.ListItemImageView android:layout_gravity="center" android:id="@+id/image" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/image_overlay" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+    <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/header_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/sponsorship_logo" android:layout_width="@dimen/widget_cover_size" android:layout_height="@dimen/device_volume_bar_height" android:layout_marginTop="@dimen/std_8dp"/>
+</LinearLayout>

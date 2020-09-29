@@ -1,0 +1,324 @@
+package com.fasterxml.jackson.databind.deser;
+
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+import com.fasterxml.jackson.annotation.JsonFormat.Value;
+import com.fasterxml.jackson.databind.AnnotationIntrospector;
+import com.fasterxml.jackson.databind.BeanDescription;
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonDeserializer.None;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.KeyDeserializer;
+import com.fasterxml.jackson.databind.deser.std.StdDelegatingDeserializer;
+import com.fasterxml.jackson.databind.introspect.Annotated;
+import com.fasterxml.jackson.databind.type.ArrayType;
+import com.fasterxml.jackson.databind.type.CollectionLikeType;
+import com.fasterxml.jackson.databind.type.CollectionType;
+import com.fasterxml.jackson.databind.type.MapLikeType;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.ReferenceType;
+import com.fasterxml.jackson.databind.util.ClassUtil;
+import com.fasterxml.jackson.databind.util.Converter;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
+public final class DeserializerCache implements Serializable {
+    private static final long serialVersionUID = 1;
+    protected final ConcurrentHashMap<JavaType, JsonDeserializer<Object>> _cachedDeserializers = new ConcurrentHashMap<>(64, 0.75f, 4);
+    protected final HashMap<JavaType, JsonDeserializer<Object>> _incompleteDeserializers = new HashMap<>(8);
+
+    private boolean _hasCustomHandlers(JavaType javaType) {
+        if (javaType.isContainerType()) {
+            JavaType contentType = javaType.getContentType();
+            if (contentType != null && (contentType.getValueHandler() != null || contentType.getTypeHandler() != null)) {
+                return true;
+            }
+            if (javaType.isMapLikeType() && javaType.getKeyType().getValueHandler() != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private Class<?> _verifyAsClass(Object obj, String str, Class<?> cls) {
+        if (obj == null) {
+            return null;
+        }
+        if (obj instanceof Class) {
+            Class<?> cls2 = (Class) obj;
+            if (cls2 == cls || ClassUtil.isBogusClass(cls2)) {
+                return null;
+            }
+            return cls2;
+        }
+        StringBuilder sb = new StringBuilder("AnnotationIntrospector.");
+        sb.append(str);
+        sb.append("() returned value of type ");
+        sb.append(obj.getClass().getName());
+        sb.append(": expected type JsonSerializer or Class<JsonSerializer> instead");
+        throw new IllegalStateException(sb.toString());
+    }
+
+    private JavaType modifyTypeByAnnotation(DeserializationContext deserializationContext, Annotated annotated, JavaType javaType) {
+        AnnotationIntrospector annotationIntrospector = deserializationContext.getAnnotationIntrospector();
+        if (annotationIntrospector == null) {
+            return javaType;
+        }
+        if (javaType.isMapLikeType()) {
+            JavaType keyType = javaType.getKeyType();
+            if (keyType != null && keyType.getValueHandler() == null) {
+                Object findKeyDeserializer = annotationIntrospector.findKeyDeserializer(annotated);
+                if (findKeyDeserializer != null) {
+                    KeyDeserializer keyDeserializerInstance = deserializationContext.keyDeserializerInstance(annotated, findKeyDeserializer);
+                    if (keyDeserializerInstance != null) {
+                        javaType = ((MapLikeType) javaType).withKeyValueHandler(keyDeserializerInstance);
+                        javaType.getKeyType();
+                    }
+                }
+            }
+        }
+        JavaType contentType = javaType.getContentType();
+        if (contentType != null && contentType.getValueHandler() == null) {
+            Object findContentDeserializer = annotationIntrospector.findContentDeserializer(annotated);
+            if (findContentDeserializer != null) {
+                JsonDeserializer jsonDeserializer = null;
+                if (!(findContentDeserializer instanceof JsonDeserializer)) {
+                    Class _verifyAsClass = _verifyAsClass(findContentDeserializer, "findContentDeserializer", None.class);
+                    if (_verifyAsClass != null) {
+                        jsonDeserializer = deserializationContext.deserializerInstance(annotated, _verifyAsClass);
+                    }
+                }
+                if (jsonDeserializer != null) {
+                    javaType = javaType.withContentValueHandler(jsonDeserializer);
+                }
+            }
+        }
+        return annotationIntrospector.refineDeserializationType(deserializationContext.getConfig(), annotated, javaType);
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> _createAndCache2(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType) {
+        try {
+            JsonDeserializer<Object> _createDeserializer = _createDeserializer(deserializationContext, deserializerFactory, javaType);
+            if (_createDeserializer == null) {
+                return null;
+            }
+            boolean z = !_hasCustomHandlers(javaType) && _createDeserializer.isCachable();
+            if (_createDeserializer instanceof ResolvableDeserializer) {
+                this._incompleteDeserializers.put(javaType, _createDeserializer);
+                ((ResolvableDeserializer) _createDeserializer).resolve(deserializationContext);
+                this._incompleteDeserializers.remove(javaType);
+            }
+            if (z) {
+                this._cachedDeserializers.put(javaType, _createDeserializer);
+            }
+            return _createDeserializer;
+        } catch (IllegalArgumentException e) {
+            throw JsonMappingException.from(deserializationContext, e.getMessage(), (Throwable) e);
+        }
+    }
+
+    /* access modifiers changed from: protected */
+    /* JADX WARNING: Code restructure failed: missing block: B:21:0x0033, code lost:
+        return r4;
+     */
+    /* Code decompiled incorrectly, please refer to instructions dump. */
+    public final com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object> _createAndCacheValueDeserializer(com.fasterxml.jackson.databind.DeserializationContext r4, com.fasterxml.jackson.databind.deser.DeserializerFactory r5, com.fasterxml.jackson.databind.JavaType r6) {
+        /*
+            r3 = this;
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r0 = r3._incompleteDeserializers
+            monitor-enter(r0)
+            com.fasterxml.jackson.databind.JsonDeserializer r1 = r3._findCachedDeserializer(r6)     // Catch:{ all -> 0x0045 }
+            if (r1 == 0) goto L_0x000b
+            monitor-exit(r0)     // Catch:{ all -> 0x0045 }
+            return r1
+        L_0x000b:
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r1 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            int r1 = r1.size()     // Catch:{ all -> 0x0045 }
+            if (r1 <= 0) goto L_0x001f
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r2 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            java.lang.Object r2 = r2.get(r6)     // Catch:{ all -> 0x0045 }
+            com.fasterxml.jackson.databind.JsonDeserializer r2 = (com.fasterxml.jackson.databind.JsonDeserializer) r2     // Catch:{ all -> 0x0045 }
+            if (r2 == 0) goto L_0x001f
+            monitor-exit(r0)     // Catch:{ all -> 0x0045 }
+            return r2
+        L_0x001f:
+            com.fasterxml.jackson.databind.JsonDeserializer r4 = r3._createAndCache2(r4, r5, r6)     // Catch:{ all -> 0x0034 }
+            if (r1 != 0) goto L_0x0032
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r5 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            int r5 = r5.size()     // Catch:{ all -> 0x0045 }
+            if (r5 <= 0) goto L_0x0032
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r5 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            r5.clear()     // Catch:{ all -> 0x0045 }
+        L_0x0032:
+            monitor-exit(r0)     // Catch:{ all -> 0x0045 }
+            return r4
+        L_0x0034:
+            r4 = move-exception
+            if (r1 != 0) goto L_0x0044
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r5 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            int r5 = r5.size()     // Catch:{ all -> 0x0045 }
+            if (r5 <= 0) goto L_0x0044
+            java.util.HashMap<com.fasterxml.jackson.databind.JavaType, com.fasterxml.jackson.databind.JsonDeserializer<java.lang.Object>> r5 = r3._incompleteDeserializers     // Catch:{ all -> 0x0045 }
+            r5.clear()     // Catch:{ all -> 0x0045 }
+        L_0x0044:
+            throw r4     // Catch:{ all -> 0x0045 }
+        L_0x0045:
+            r4 = move-exception
+            monitor-exit(r0)     // Catch:{ all -> 0x0045 }
+            throw r4
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(com.fasterxml.jackson.databind.DeserializationContext, com.fasterxml.jackson.databind.deser.DeserializerFactory, com.fasterxml.jackson.databind.JavaType):com.fasterxml.jackson.databind.JsonDeserializer");
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> _createDeserializer(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType) {
+        DeserializationConfig config = deserializationContext.getConfig();
+        if (javaType.isAbstract() || javaType.isMapLikeType() || javaType.isCollectionLikeType()) {
+            javaType = deserializerFactory.mapAbstractType(config, javaType);
+        }
+        BeanDescription introspect = config.introspect(javaType);
+        JsonDeserializer<Object> findDeserializerFromAnnotation = findDeserializerFromAnnotation(deserializationContext, introspect.getClassInfo());
+        if (findDeserializerFromAnnotation != null) {
+            return findDeserializerFromAnnotation;
+        }
+        JavaType modifyTypeByAnnotation = modifyTypeByAnnotation(deserializationContext, introspect.getClassInfo(), javaType);
+        if (modifyTypeByAnnotation != javaType) {
+            introspect = config.introspect(modifyTypeByAnnotation);
+            javaType = modifyTypeByAnnotation;
+        }
+        Class findPOJOBuilder = introspect.findPOJOBuilder();
+        if (findPOJOBuilder != null) {
+            return deserializerFactory.createBuilderBasedDeserializer(deserializationContext, javaType, introspect, findPOJOBuilder);
+        }
+        Converter findDeserializationConverter = introspect.findDeserializationConverter();
+        if (findDeserializationConverter == null) {
+            return _createDeserializer2(deserializationContext, deserializerFactory, javaType, introspect);
+        }
+        JavaType inputType = findDeserializationConverter.getInputType(deserializationContext.getTypeFactory());
+        if (!inputType.hasRawClass(javaType.getRawClass())) {
+            introspect = config.introspect(inputType);
+        }
+        return new StdDelegatingDeserializer(findDeserializationConverter, inputType, _createDeserializer2(deserializationContext, deserializerFactory, inputType, introspect));
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<?> _createDeserializer2(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType, BeanDescription beanDescription) {
+        DeserializationConfig config = deserializationContext.getConfig();
+        if (javaType.isEnumType()) {
+            return deserializerFactory.createEnumDeserializer(deserializationContext, javaType, beanDescription);
+        }
+        if (javaType.isContainerType()) {
+            if (javaType.isArrayType()) {
+                return deserializerFactory.createArrayDeserializer(deserializationContext, (ArrayType) javaType, beanDescription);
+            }
+            if (javaType.isMapLikeType()) {
+                Value findExpectedFormat = beanDescription.findExpectedFormat(null);
+                if (findExpectedFormat == null || findExpectedFormat.getShape() != Shape.OBJECT) {
+                    MapLikeType mapLikeType = (MapLikeType) javaType;
+                    return mapLikeType.isTrueMapType() ? deserializerFactory.createMapDeserializer(deserializationContext, (MapType) mapLikeType, beanDescription) : deserializerFactory.createMapLikeDeserializer(deserializationContext, mapLikeType, beanDescription);
+                }
+            }
+            if (javaType.isCollectionLikeType()) {
+                Value findExpectedFormat2 = beanDescription.findExpectedFormat(null);
+                if (findExpectedFormat2 == null || findExpectedFormat2.getShape() != Shape.OBJECT) {
+                    CollectionLikeType collectionLikeType = (CollectionLikeType) javaType;
+                    return collectionLikeType.isTrueCollectionType() ? deserializerFactory.createCollectionDeserializer(deserializationContext, (CollectionType) collectionLikeType, beanDescription) : deserializerFactory.createCollectionLikeDeserializer(deserializationContext, collectionLikeType, beanDescription);
+                }
+            }
+        }
+        return javaType.isReferenceType() ? deserializerFactory.createReferenceDeserializer(deserializationContext, (ReferenceType) javaType, beanDescription) : JsonNode.class.isAssignableFrom(javaType.getRawClass()) ? deserializerFactory.createTreeDeserializer(config, javaType, beanDescription) : deserializerFactory.createBeanDeserializer(deserializationContext, javaType, beanDescription);
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> _findCachedDeserializer(JavaType javaType) {
+        if (javaType == null) {
+            throw new IllegalArgumentException("Null JavaType passed");
+        } else if (_hasCustomHandlers(javaType)) {
+            return null;
+        } else {
+            return (JsonDeserializer) this._cachedDeserializers.get(javaType);
+        }
+    }
+
+    /* access modifiers changed from: protected */
+    public final KeyDeserializer _handleUnknownKeyDeserializer(DeserializationContext deserializationContext, JavaType javaType) {
+        StringBuilder sb = new StringBuilder("Cannot find a (Map) Key deserializer for type ");
+        sb.append(javaType);
+        return (KeyDeserializer) deserializationContext.reportBadDefinition(javaType, sb.toString());
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> _handleUnknownValueDeserializer(DeserializationContext deserializationContext, JavaType javaType) {
+        if (!ClassUtil.isConcrete(javaType.getRawClass())) {
+            StringBuilder sb = new StringBuilder("Cannot find a Value deserializer for abstract type ");
+            sb.append(javaType);
+            return (JsonDeserializer) deserializationContext.reportBadDefinition(javaType, sb.toString());
+        }
+        StringBuilder sb2 = new StringBuilder("Cannot find a Value deserializer for type ");
+        sb2.append(javaType);
+        return (JsonDeserializer) deserializationContext.reportBadDefinition(javaType, sb2.toString());
+    }
+
+    /* access modifiers changed from: protected */
+    public final Converter<Object, Object> findConverter(DeserializationContext deserializationContext, Annotated annotated) {
+        Object findDeserializationConverter = deserializationContext.getAnnotationIntrospector().findDeserializationConverter(annotated);
+        if (findDeserializationConverter == null) {
+            return null;
+        }
+        return deserializationContext.converterInstance(annotated, findDeserializationConverter);
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> findConvertingDeserializer(DeserializationContext deserializationContext, Annotated annotated, JsonDeserializer<Object> jsonDeserializer) {
+        Converter findConverter = findConverter(deserializationContext, annotated);
+        return findConverter == null ? jsonDeserializer : new StdDelegatingDeserializer(findConverter, findConverter.getInputType(deserializationContext.getTypeFactory()), jsonDeserializer);
+    }
+
+    /* access modifiers changed from: protected */
+    public final JsonDeserializer<Object> findDeserializerFromAnnotation(DeserializationContext deserializationContext, Annotated annotated) {
+        Object findDeserializer = deserializationContext.getAnnotationIntrospector().findDeserializer(annotated);
+        if (findDeserializer == null) {
+            return null;
+        }
+        return findConvertingDeserializer(deserializationContext, annotated, deserializationContext.deserializerInstance(annotated, findDeserializer));
+    }
+
+    public final KeyDeserializer findKeyDeserializer(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType) {
+        KeyDeserializer createKeyDeserializer = deserializerFactory.createKeyDeserializer(deserializationContext, javaType);
+        if (createKeyDeserializer == null) {
+            return _handleUnknownKeyDeserializer(deserializationContext, javaType);
+        }
+        if (createKeyDeserializer instanceof ResolvableDeserializer) {
+            ((ResolvableDeserializer) createKeyDeserializer).resolve(deserializationContext);
+        }
+        return createKeyDeserializer;
+    }
+
+    public final JsonDeserializer<Object> findValueDeserializer(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType) {
+        JsonDeserializer<Object> _findCachedDeserializer = _findCachedDeserializer(javaType);
+        if (_findCachedDeserializer != null) {
+            return _findCachedDeserializer;
+        }
+        JsonDeserializer<Object> _createAndCacheValueDeserializer = _createAndCacheValueDeserializer(deserializationContext, deserializerFactory, javaType);
+        return _createAndCacheValueDeserializer == null ? _handleUnknownValueDeserializer(deserializationContext, javaType) : _createAndCacheValueDeserializer;
+    }
+
+    public final boolean hasValueDeserializerFor(DeserializationContext deserializationContext, DeserializerFactory deserializerFactory, JavaType javaType) {
+        JsonDeserializer _findCachedDeserializer = _findCachedDeserializer(javaType);
+        if (_findCachedDeserializer == null) {
+            _findCachedDeserializer = _createAndCacheValueDeserializer(deserializationContext, deserializerFactory, javaType);
+        }
+        return _findCachedDeserializer != null;
+    }
+
+    /* access modifiers changed from: 0000 */
+    public final Object writeReplace() {
+        this._incompleteDeserializers.clear();
+        return this;
+    }
+}
